@@ -3,13 +3,30 @@ async function loadBriefings() {
   return res.json();
 }
 
-function renderLatest(item) {
+function toPreview(text) {
+  const lines = text
+    .split('\n')
+    .map(l => l.trim())
+    .filter(l => l && !l.startsWith('#'));
+  return lines.slice(0, 4).join('\n');
+}
+
+async function renderLatest(item) {
   const latest = document.getElementById('latest');
+  let preview = '';
+  try {
+    const res = await fetch(item.file);
+    const txt = await res.text();
+    preview = toPreview(txt);
+  } catch {
+    preview = '본문 미리보기를 불러오지 못했습니다.';
+  }
+
   latest.innerHTML = `
     <h2>오늘 브리핑 (${item.date})</h2>
     <p class="meta">${item.title}</p>
     <ul>${item.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
-    <p><a href="${item.file}" target="_blank">전체 본문 보기</a></p>
+    <p class="meta" style="margin-top:10px; white-space:pre-wrap;">${preview}</p>
   `;
 }
 
@@ -45,7 +62,7 @@ function renderList(items) {
 
 (async () => {
   const data = await loadBriefings();
-  renderLatest(data[0]);
+  await renderLatest(data[0]);
   renderList(data);
   showPost(data[0]);
 
