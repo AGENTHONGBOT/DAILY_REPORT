@@ -27,17 +27,17 @@ async function showPost(item) {
 function renderList(items) {
   const list = document.getElementById('briefing-list');
   list.innerHTML = items.map((i, idx) => `
-    <li class="brief-item">
+    <li class="brief-item" data-idx="${idx}">
       <div><strong>${i.date}</strong> - ${i.title}</div>
       <div class="meta">${i.tags.join(', ')}</div>
-      <button data-idx="${idx}">미리보기</button>
-      <a href="${i.file}" target="_blank">새창 보기</a>
     </li>
   `).join('');
 
-  [...list.querySelectorAll('button')].forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = items[Number(btn.dataset.idx)];
+  [...list.querySelectorAll('.brief-item')].forEach((el) => {
+    el.addEventListener('click', () => {
+      [...list.querySelectorAll('.brief-item')].forEach(n => n.classList.remove('active'));
+      el.classList.add('active');
+      const item = items[Number(el.dataset.idx)];
       showPost(item);
     });
   });
@@ -49,10 +49,6 @@ function renderList(items) {
   renderList(data);
   showPost(data[0]);
 
-  document.getElementById('search').addEventListener('input', (e) => {
-    const q = e.target.value.toLowerCase();
-    const filtered = data.filter(i => (i.title + ' ' + i.tags.join(' ')).toLowerCase().includes(q));
-    renderList(filtered);
-    if (filtered.length) showPost(filtered[0]);
-  });
+  const first = document.querySelector('#briefing-list .brief-item');
+  if (first) first.classList.add('active');
 })();

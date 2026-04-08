@@ -3,16 +3,12 @@ header { padding: 24px; background:#111827; border-bottom:1px solid #1f2937; }
 h1 { margin: 0 0 8px; }
 main { max-width: 1080px; margin: 24px auto; padding: 0 16px; display: grid; gap: 16px; }
 .card { background:#111827; border:1px solid #1f2937; border-radius: 14px; padding: 16px; box-shadow: 0 6px 20px rgba(0,0,0,.2); }
-.grid-two { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
-@media (max-width: 900px){ .grid-two{ grid-template-columns: 1fr; } }
-#search { width:100%; padding:10px; border-radius:8px; border:1px solid #374151; background:#0b1220; color:#fff; margin-bottom:12px; }
 ul { list-style:none; padding:0; margin:0; }
 li { padding:10px 0; border-bottom:1px solid #1f2937; }
 li:last-child{ border-bottom:none; }
-.brief-item button{margin-top:6px; padding:6px 10px; border:1px solid #334155; background:#0b1220; color:#cbd5e1; border-radius:8px; cursor:pointer;}
-.brief-item button:hover{background:#1f2937;}
-a { color:#93c5fd; text-decoration:none; }
-a:hover { text-decoration:underline; }
+.brief-item{cursor:pointer;}
+.brief-item:hover{background:#0b1220;}
+.brief-item.active{background:#0b1220; border-left:3px solid #60a5fa; padding-left:8px;}
 .meta { color:#9ca3af; font-size:13px; }
-#post-view{line-height:1.6; white-space:pre-wrap; max-height:560px; overflow:auto;}
+#post-view{line-height:1.7; white-space:pre-wrap; max-height:680px; overflow:auto; font-size:15px;}
 footer { text-align:center; padding: 18px; color:#9ca3af; }
