@@ -25,16 +25,26 @@ function toPreview(text) {
 }
 
 function extractIndexMoves(text) {
-  const pick = (keys) => {
-    const pattern = new RegExp(`(?:${keys.join('|')})[^\n%]{0,40}?([+\-]\d+(?:\.\d+)?)%`, 'i');
-    const m = text.match(pattern);
-    return m ? `${m[1]}%` : 'N/A';
+  const clean = text.replace(/\*\*/g, '').replace(/`/g, '');
+
+  const patterns = {
+    sp: [/(?:S&P\s?500|S\&P\s?500)\s*[:\-]?\s*[^\n]{0,30}?([+\-]\d+(?:\.\d+)?)%/i],
+    nasdaq: [/(?:Nasdaq|NASDAQ|나스닥)\s*[:\-]?\s*[^\n]{0,30}?([+\-]\d+(?:\.\d+)?)%/i],
+    dow: [/(?:Dow|DOW|다우)\s*[:\-]?\s*[^\n]{0,30}?([+\-]\d+(?:\.\d+)?)%/i]
+  };
+
+  const pick = (arr) => {
+    for (const p of arr) {
+      const m = clean.match(p);
+      if (m) return `${m[1]}%`;
+    }
+    return 'N/A';
   };
 
   return {
-    sp: pick(['S&P500', 'S\\&P500', 'S&P 500', 'S\\&P 500']),
-    nasdaq: pick(['Nasdaq', 'NASDAQ', '나스닥']),
-    dow: pick(['Dow', 'DOW', '다우'])
+    sp: pick(patterns.sp),
+    nasdaq: pick(patterns.nasdaq),
+    dow: pick(patterns.dow)
   };
 }
 
