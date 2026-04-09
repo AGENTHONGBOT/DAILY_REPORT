@@ -24,27 +24,19 @@ function toPreview(text) {
   return fallback.slice(0, 3).join('\n');
 }
 
-function extractIndexMoves(text) {
+function extractIndexMoves(text, item) {
   const clean = text.replace(/\*\*/g, '').replace(/`/g, '');
+  const source = `${(item?.highlights || []).join(' ')} ${clean}`;
 
-  const patterns = {
-    sp: [/(?:S&P\s?500|S\&P\s?500)\s*[:\-]?\s*[^\n]{0,30}?([+\-]\d+(?:\.\d+)?)%/i],
-    nasdaq: [/(?:Nasdaq|NASDAQ|나스닥)\s*[:\-]?\s*[^\n]{0,30}?([+\-]\d+(?:\.\d+)?)%/i],
-    dow: [/(?:Dow|DOW|다우)\s*[:\-]?\s*[^\n]{0,30}?([+\-]\d+(?:\.\d+)?)%/i]
-  };
-
-  const pick = (arr) => {
-    for (const p of arr) {
-      const m = clean.match(p);
-      if (m) return `${m[1]}%`;
-    }
-    return 'N/A';
+  const pick = (re) => {
+    const m = source.match(re);
+    return m ? `${m[1]}%` : 'N/A';
   };
 
   return {
-    sp: pick(patterns.sp),
-    nasdaq: pick(patterns.nasdaq),
-    dow: pick(patterns.dow)
+    sp: pick(/(?:S&P\s?500|S\&P\s?500)\s*[:\-]?\s*[^\n%]{0,20}?([+\-]\d+(?:\.\d+)?)%/i),
+    nasdaq: pick(/(?:Nasdaq|NASDAQ|나스닥)\s*[:\-]?\s*[^\n%]{0,20}?([+\-]\d+(?:\.\d+)?)%/i),
+    dow: pick(/(?:Dow|DOW|다우)\s*[:\-]?\s*[^\n%]{0,20}?([+\-]\d+(?:\.\d+)?)%/i)
   };
 }
 
@@ -56,7 +48,7 @@ async function renderLatest(item) {
     const res = await fetch(item.file);
     const txt = await res.text();
     preview = toPreview(txt);
-    moves = extractIndexMoves(txt);
+    moves = extractIndexMoves(txt, item);
   } catch {
     preview = '본문 미리보기를 불러오지 못했습니다.';
   }
