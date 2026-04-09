@@ -25,47 +25,33 @@ function toPreview(text) {
 }
 
 function extractIndexStats(text, item) {
-  const clean = text.replace(/\*\*/g, '').replace(/`/g, '');
-  const highlights = (item?.highlights || []).join(' ');
+  // 0) Prefer explicit structured fields when present
+  if (item?.indices?.sp || item?.indices?.nasdaq || item?.indices?.dow) {
+    return {
+      sp: item.indices?.sp || { level: '—', chg: 'N/A' },
+      nasdaq: item.indices?.nasdaq || { level: '—', chg: 'N/A' },
+      dow: item.indices?.dow || { level: '—', chg: 'N/A' }
+    };
+  }
 
-  const getLevel = (keys) => {
-    for (const k of keys) {
-      const re = new RegExp(`${k}\\s*:\\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\\.[0-9]+)?)`, 'i');
-      const m = clean.match(re);
-      if (m) return m[1];
-    }
-    return '—';
+  const clean = text.replace(/\*\*/g, '').replace(/`/g, '');
+
+  const getLevel = (label) => {
+    const re = new RegExp(`\\b${label}\\b\\s*:\\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\\.[0-9]+)?)`, 'i');
+    const m = clean.match(re);
+    return m ? m[1] : '—';
   };
 
-  const getChange = (keys) => {
-    // 1) Prefer highlights line (stable and concise)
-    for (const k of keys) {
-      const re = new RegExp(`${k}[^\\n%]{0,30}?([+\\-]\\d+(?:\\.\\d+)?)%`, 'i');
-      const m = highlights.match(re);
-      if (m) return `${m[1]}%`;
-    }
-    // 2) Fallback to full text
-    for (const k of keys) {
-      const re = new RegExp(`${k}[^\\n%]{0,30}?([+\\-]\\d+(?:\\.\\d+)?)%`, 'i');
-      const m = clean.match(re);
-      if (m) return `${m[1]}%`;
-    }
-    return 'N/A';
+  const getChange = (label) => {
+    const re = new RegExp(`\\b${label}\\b[^\\n%]{0,40}?([+\\-]\\d+(?:\\.\\d+)?)%`, 'i');
+    const m = clean.match(re);
+    return m ? `${m[1]}%` : 'N/A';
   };
 
   return {
-    sp: {
-      level: getLevel(['S&P\\s?500', 'S\\&P\\s?500']),
-      chg: getChange(['S&P\\s?500', 'S\\&P\\s?500'])
-    },
-    nasdaq: {
-      level: getLevel(['Nasdaq', 'NASDAQ', '나스닥']),
-      chg: getChange(['Nasdaq', 'NASDAQ', '나스닥'])
-    },
-    dow: {
-      level: getLevel(['Dow', 'DOW', '다우']),
-      chg: getChange(['Dow', 'DOW', '다우'])
-    }
+    sp: { level: getLevel('S&P\\s?500|S\\&P\\s?500'), chg: getChange('S&P\\s?500|S\\&P\\s?500') },
+    nasdaq: { level: getLevel('Nasdaq|NASDAQ|나스닥'), chg: getChange('Nasdaq|NASDAQ|나스닥') },
+    dow: { level: getLevel('Dow|DOW|다우'), chg: getChange('Dow|DOW|다우') }
   };
 }
 
