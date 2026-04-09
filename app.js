@@ -15,7 +15,7 @@ function toPreview(text) {
       if (t.startsWith('## ')) break;
       picked.push(t);
     }
-    if (picked.length) return picked.join('\n');
+    if (picked.length) return picked.slice(0, 2).join('\n');
   }
 
   const fallback = lines
