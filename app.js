@@ -105,7 +105,9 @@ async function showPost(item) {
   try {
     const res = await fetch(item.file);
     const txt = await res.text();
-    target.textContent = removeCoreThreeSection(txt);
+    target.textContent = removeCoreThreeSection(txt)
+      .replace(/\*\*/g, '')
+      .replace(/\t/g, '  ');
   } catch {
     target.textContent = '본문을 불러오지 못했습니다.';
   }
