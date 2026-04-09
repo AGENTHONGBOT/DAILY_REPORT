@@ -8,19 +8,27 @@
 </head>
 <body>
   <header>
-    <h1>📈 Daily Market Briefing</h1>
-    <p>매일 9시 브리핑 아카이브</p>
+    <div class="hero">
+      <p class="eyebrow">AGENT HONG · DAILY INTELLIGENCE</p>
+      <h1>Global Macro & US Market Briefing</h1>
+      <p class="subtitle">매일 09:00 KST 업데이트 · 핵심 이슈, 시장 반응, 투자 체크포인트를 한눈에</p>
+      <div class="hero-meta">
+        <span>Coverage: US Equities · Rates · FX · Commodities</span>
+        <span>Format: Morning Brief + Blog-ready Note</span>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section id="latest" class="card"></section>
-    <section class="card">
-      <h2>브리핑 목록</h2>
-      <ul id="briefing-list"></ul>
-    </section>
+    <section id="latest" class="card featured"></section>
     <section class="card" id="viewer">
-      <h2>본문</h2>
+      <h2>오늘 브리핑 본문</h2>
       <div id="post-view">브리핑을 불러오는 중...</div>
+    </section>
+    <section class="card archive">
+      <h2>브리핑 아카이브</h2>
+      <p class="meta">날짜를 선택하면 본문이 위 영역에서 바로 바뀝니다.</p>
+      <ul id="briefing-list"></ul>
     </section>
   </main>
 
