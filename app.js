@@ -4,11 +4,24 @@ async function loadBriefings() {
 }
 
 function toPreview(text) {
-  const lines = text
-    .split('\n')
+  const lines = text.split('\n');
+  const start = lines.findIndex(l => l.trim() === '## 오늘의 핵심 3줄');
+
+  if (start >= 0) {
+    const picked = [];
+    for (let i = start + 1; i < lines.length; i++) {
+      const t = lines[i].trim();
+      if (!t) continue;
+      if (t.startsWith('## ')) break;
+      picked.push(t);
+    }
+    if (picked.length) return picked.join('\n');
+  }
+
+  const fallback = lines
     .map(l => l.trim())
     .filter(l => l && !l.startsWith('#'));
-  return lines.slice(0, 4).join('\n');
+  return fallback.slice(0, 3).join('\n');
 }
 
 async function renderLatest(item) {
