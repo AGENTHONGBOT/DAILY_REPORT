@@ -34,6 +34,25 @@ function extractIndexStats(text, item) {
   };
 }
 
+function extractCoreThree(text) {
+  const lines = text.split('\n');
+  const start = lines.findIndex(l => l.trim() === '## 오늘의 핵심 3줄');
+  if (start < 0) return [];
+  const out = [];
+  for (let i = start + 1; i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (!t) continue;
+    if (t.startsWith('## ')) break;
+    out.push(t.replace(/^\d+\.\s*/, ''));
+  }
+  return out.slice(0, 3);
+}
+
+function removeCoreThreeSection(text) {
+  const re = /\n## 오늘의 핵심 3줄[\s\S]*?(?=\n##\s|$)/;
+  return text.replace(re, '\n').replace(/\n{3,}/g, '\n\n').trim();
+}
+
 async function renderLatest(item) {
   const latest = document.getElementById('latest');
   let stats = {
@@ -41,11 +60,13 @@ async function renderLatest(item) {
     nasdaq: { level: '—', chg: 'N/A' },
     dow: { level: '—', chg: 'N/A' }
   };
+  let core = [];
 
   try {
     const res = await fetch(item.file);
     const txt = await res.text();
     stats = extractIndexStats(txt, item);
+    core = extractCoreThree(txt);
   } catch {
     // keep defaults
   }
@@ -71,6 +92,11 @@ async function renderLatest(item) {
         <em>${stats.dow.chg}</em>
       </div>
     </div>
+
+    <div class="core-three">
+      <h3>오늘의 핵심 3줄</h3>
+      <ol>${core.map(c => `<li>${c}</li>`).join('')}</ol>
+    </div>
   `;
 }
 
@@ -79,7 +105,7 @@ async function showPost(item) {
   try {
     const res = await fetch(item.file);
     const txt = await res.text();
-    target.textContent = txt;
+    target.textContent = removeCoreThreeSection(txt);
   } catch {
     target.textContent = '본문을 불러오지 못했습니다.';
   }

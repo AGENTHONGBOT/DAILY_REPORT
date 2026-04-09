@@ -23,6 +23,10 @@ li:last-child{ border-bottom:none; }
 .brief-item:hover{background:#0b1220;}
 .brief-item.active{background:#0b1220; border-left:3px solid #60a5fa; padding-left:12px;}
 .meta { color:#9ca3af; font-size:13px; }
+.core-three{margin-top:12px; border-top:1px solid #1f2937; padding-top:12px;}
+.core-three h3{margin:0 0 8px; font-size:15px; color:#cbd5e1;}
+.core-three ol{margin:0; padding-left:18px; color:#e2e8f0;}
+.core-three li{padding:4px 0; border-bottom:none;}
 #post-view{line-height:1.75; white-space:pre-wrap; max-height:720px; overflow:auto; font-size:15px; color:#e2e8f0;}
 footer { text-align:center; padding: 18px; color:#9ca3af; }
 @media (max-width:700px){ h1{font-size:26px;} header{padding:24px 16px;} }
