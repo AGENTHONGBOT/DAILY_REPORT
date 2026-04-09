@@ -24,31 +24,42 @@ function toPreview(text) {
   return fallback.slice(0, 3).join('\n');
 }
 
-function extractIndexMoves(text, item) {
+function extractIndexStats(text, item) {
   const clean = text.replace(/\*\*/g, '').replace(/`/g, '');
-  const source = `${(item?.highlights || []).join(' ')} ${clean}`;
+  const source = `${(item?.highlights || []).join(' ')}\n${clean}`;
 
-  const pick = (re) => {
-    const m = source.match(re);
-    return m ? `${m[1]}%` : 'N/A';
+  const extract = (keys) => {
+    const key = `(?:${keys.join('|')})`;
+    const full = new RegExp(`${key}[^\n]*?([0-9]{1,3}(?:,[0-9]{3})*(?:\\.[0-9]+)?)\\D+([+\\-][0-9]+(?:\\.[0-9]+)?)%`, 'i');
+    const pctOnly = new RegExp(`${key}[^\n%]{0,40}?([+\\-][0-9]+(?:\\.[0-9]+)?)%`, 'i');
+
+    const m1 = source.match(full);
+    if (m1) return { level: m1[1], chg: `${m1[2]}%` };
+
+    const m2 = source.match(pctOnly);
+    return { level: '—', chg: m2 ? `${m2[1]}%` : 'N/A' };
   };
 
   return {
-    sp: pick(/(?:S&P\s?500|S\&P\s?500)\s*[:\-]?\s*[^\n%]{0,20}?([+\-]\d+(?:\.\d+)?)%/i),
-    nasdaq: pick(/(?:Nasdaq|NASDAQ|나스닥)\s*[:\-]?\s*[^\n%]{0,20}?([+\-]\d+(?:\.\d+)?)%/i),
-    dow: pick(/(?:Dow|DOW|다우)\s*[:\-]?\s*[^\n%]{0,20}?([+\-]\d+(?:\.\d+)?)%/i)
+    sp: extract(['S&P\\s?500', 'S\\&P\\s?500']),
+    nasdaq: extract(['Nasdaq', 'NASDAQ', '나스닥']),
+    dow: extract(['Dow', 'DOW', '다우'])
   };
 }
 
 async function renderLatest(item) {
   const latest = document.getElementById('latest');
   let preview = '';
-  let moves = { sp: 'N/A', nasdaq: 'N/A', dow: 'N/A' };
+  let stats = {
+    sp: { level: '—', chg: 'N/A' },
+    nasdaq: { level: '—', chg: 'N/A' },
+    dow: { level: '—', chg: 'N/A' }
+  };
   try {
     const res = await fetch(item.file);
     const txt = await res.text();
     preview = toPreview(txt);
-    moves = extractIndexMoves(txt, item);
+    stats = extractIndexStats(txt, item);
   } catch {
     preview = '본문 미리보기를 불러오지 못했습니다.';
   }
@@ -58,9 +69,21 @@ async function renderLatest(item) {
     <p class="meta">${item.title}</p>
 
     <div class="index-strip">
-      <div class="idx-card"><span>S&P500</span><strong>${moves.sp}</strong></div>
-      <div class="idx-card"><span>Nasdaq</span><strong>${moves.nasdaq}</strong></div>
-      <div class="idx-card"><span>Dow</span><strong>${moves.dow}</strong></div>
+      <div class="idx-card">
+        <span>S&P500</span>
+        <strong>${stats.sp.level}</strong>
+        <em>${stats.sp.chg}</em>
+      </div>
+      <div class="idx-card">
+        <span>Nasdaq</span>
+        <strong>${stats.nasdaq.level}</strong>
+        <em>${stats.nasdaq.chg}</em>
+      </div>
+      <div class="idx-card">
+        <span>Dow</span>
+        <strong>${stats.dow.level}</strong>
+        <em>${stats.dow.chg}</em>
+      </div>
     </div>
 
     <ul>${item.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
