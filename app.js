@@ -24,13 +24,29 @@ function toPreview(text) {
   return fallback.slice(0, 3).join('\n');
 }
 
+function extractIndexMoves(text) {
+  const pick = (keys) => {
+    const pattern = new RegExp(`(?:${keys.join('|')})[^\n%]{0,40}?([+\-]\d+(?:\.\d+)?)%`, 'i');
+    const m = text.match(pattern);
+    return m ? `${m[1]}%` : 'N/A';
+  };
+
+  return {
+    sp: pick(['S&P500', 'S\\&P500', 'S&P 500', 'S\\&P 500']),
+    nasdaq: pick(['Nasdaq', 'NASDAQ', '나스닥']),
+    dow: pick(['Dow', 'DOW', '다우'])
+  };
+}
+
 async function renderLatest(item) {
   const latest = document.getElementById('latest');
   let preview = '';
+  let moves = { sp: 'N/A', nasdaq: 'N/A', dow: 'N/A' };
   try {
     const res = await fetch(item.file);
     const txt = await res.text();
     preview = toPreview(txt);
+    moves = extractIndexMoves(txt);
   } catch {
     preview = '본문 미리보기를 불러오지 못했습니다.';
   }
@@ -38,6 +54,13 @@ async function renderLatest(item) {
   latest.innerHTML = `
     <h2>오늘 브리핑 (${item.date})</h2>
     <p class="meta">${item.title}</p>
+
+    <div class="index-strip">
+      <div class="idx-card"><span>S&P500</span><strong>${moves.sp}</strong></div>
+      <div class="idx-card"><span>Nasdaq</span><strong>${moves.nasdaq}</strong></div>
+      <div class="idx-card"><span>Dow</span><strong>${moves.dow}</strong></div>
+    </div>
+
     <ul>${item.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
     <p class="meta" style="margin-top:10px; white-space:pre-wrap;">${preview}</p>
   `;

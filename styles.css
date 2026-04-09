@@ -10,6 +10,11 @@ main { max-width: 1080px; margin: 24px auto; padding: 0 16px; display: grid; gap
 .card { background:#111827; border:1px solid #1f2937; border-radius: 16px; padding: 18px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
 .featured { border-color:#1d4ed8; }
 .archive { margin-top: 4px; }
+.index-strip{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:14px 0 12px;}
+.idx-card{border:1px solid #334155; background:#0b1220; border-radius:12px; padding:10px 12px;}
+.idx-card span{display:block; color:#94a3b8; font-size:12px; margin-bottom:4px;}
+.idx-card strong{font-size:20px; letter-spacing:.01em;}
+@media (max-width:700px){.index-strip{grid-template-columns:1fr;}}
 ul { list-style:none; padding:0; margin:0; }
 li { padding:10px 0; border-bottom:1px solid #1f2937; }
 li:last-child{ border-bottom:none; }
