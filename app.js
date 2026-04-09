@@ -3,29 +3,8 @@ async function loadBriefings() {
   return res.json();
 }
 
-function toPreview(text) {
-  const lines = text.split('\n');
-  const start = lines.findIndex(l => l.trim() === '## 오늘의 핵심 3줄');
-
-  if (start >= 0) {
-    const picked = [];
-    for (let i = start + 1; i < lines.length; i++) {
-      const t = lines[i].trim();
-      if (!t) continue;
-      if (t.startsWith('## ')) break;
-      picked.push(t);
-    }
-    if (picked.length) return picked.slice(0, 2).join('\n');
-  }
-
-  const fallback = lines
-    .map(l => l.trim())
-    .filter(l => l && !l.startsWith('#'));
-  return fallback.slice(0, 3).join('\n');
-}
-
 function extractIndexStats(text, item) {
-  // 0) Prefer explicit structured fields when present
+  // Prefer explicit structured fields when present
   if (item?.indices?.sp || item?.indices?.nasdaq || item?.indices?.dow) {
     return {
       sp: item.indices?.sp || { level: '—', chg: 'N/A' },
@@ -57,19 +36,18 @@ function extractIndexStats(text, item) {
 
 async function renderLatest(item) {
   const latest = document.getElementById('latest');
-  let preview = '';
   let stats = {
     sp: { level: '—', chg: 'N/A' },
     nasdaq: { level: '—', chg: 'N/A' },
     dow: { level: '—', chg: 'N/A' }
   };
+
   try {
     const res = await fetch(item.file);
     const txt = await res.text();
-    preview = toPreview(txt);
     stats = extractIndexStats(txt, item);
   } catch {
-    preview = '본문 미리보기를 불러오지 못했습니다.';
+    // keep defaults
   }
 
   latest.innerHTML = `
@@ -93,9 +71,6 @@ async function renderLatest(item) {
         <em>${stats.dow.chg}</em>
       </div>
     </div>
-
-    <ul>${item.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
-    <p class="meta" style="margin-top:10px; white-space:pre-wrap;">${preview}</p>
   `;
 }
 
@@ -105,7 +80,7 @@ async function showPost(item) {
     const res = await fetch(item.file);
     const txt = await res.text();
     target.textContent = txt;
-  } catch (e) {
+  } catch {
     target.textContent = '본문을 불러오지 못했습니다.';
   }
 }
@@ -125,6 +100,7 @@ function renderList(items) {
       el.classList.add('active');
       const item = items[Number(el.dataset.idx)];
       showPost(item);
+      renderLatest(item);
     });
   });
 }
