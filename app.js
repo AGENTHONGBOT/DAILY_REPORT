@@ -26,24 +26,46 @@ function toPreview(text) {
 
 function extractIndexStats(text, item) {
   const clean = text.replace(/\*\*/g, '').replace(/`/g, '');
-  const source = `${(item?.highlights || []).join(' ')}\n${clean}`;
+  const highlights = (item?.highlights || []).join(' ');
 
-  const extract = (keys) => {
-    const key = `(?:${keys.join('|')})`;
-    const full = new RegExp(`${key}[^\n]*?([0-9]{1,3}(?:,[0-9]{3})*(?:\\.[0-9]+)?)\\D+([+\\-][0-9]+(?:\\.[0-9]+)?)%`, 'i');
-    const pctOnly = new RegExp(`${key}[^\n%]{0,40}?([+\\-][0-9]+(?:\\.[0-9]+)?)%`, 'i');
+  const getLevel = (keys) => {
+    for (const k of keys) {
+      const re = new RegExp(`${k}\\s*:\\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\\.[0-9]+)?)`, 'i');
+      const m = clean.match(re);
+      if (m) return m[1];
+    }
+    return '—';
+  };
 
-    const m1 = source.match(full);
-    if (m1) return { level: m1[1], chg: `${m1[2]}%` };
-
-    const m2 = source.match(pctOnly);
-    return { level: '—', chg: m2 ? `${m2[1]}%` : 'N/A' };
+  const getChange = (keys) => {
+    // 1) Prefer highlights line (stable and concise)
+    for (const k of keys) {
+      const re = new RegExp(`${k}[^\\n%]{0,30}?([+\\-]\\d+(?:\\.\\d+)?)%`, 'i');
+      const m = highlights.match(re);
+      if (m) return `${m[1]}%`;
+    }
+    // 2) Fallback to full text
+    for (const k of keys) {
+      const re = new RegExp(`${k}[^\\n%]{0,30}?([+\\-]\\d+(?:\\.\\d+)?)%`, 'i');
+      const m = clean.match(re);
+      if (m) return `${m[1]}%`;
+    }
+    return 'N/A';
   };
 
   return {
-    sp: extract(['S&P\\s?500', 'S\\&P\\s?500']),
-    nasdaq: extract(['Nasdaq', 'NASDAQ', '나스닥']),
-    dow: extract(['Dow', 'DOW', '다우'])
+    sp: {
+      level: getLevel(['S&P\\s?500', 'S\\&P\\s?500']),
+      chg: getChange(['S&P\\s?500', 'S\\&P\\s?500'])
+    },
+    nasdaq: {
+      level: getLevel(['Nasdaq', 'NASDAQ', '나스닥']),
+      chg: getChange(['Nasdaq', 'NASDAQ', '나스닥'])
+    },
+    dow: {
+      level: getLevel(['Dow', 'DOW', '다우']),
+      chg: getChange(['Dow', 'DOW', '다우'])
+    }
   };
 }
 
