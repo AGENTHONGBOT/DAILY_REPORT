@@ -93,6 +93,7 @@ async function renderLatest(item) {
       </div>
     </div>
 
+    ${item.overnightLead ? `<div class="lead-box"><h3>Overnight Lead</h3><p>${item.overnightLead}</p></div>` : ''}
   `;
 }
 
