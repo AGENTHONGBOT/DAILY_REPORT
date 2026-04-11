@@ -72,13 +72,13 @@ function renderInsights(item, text) {
   const issue = firstUsefulLine(getSection(text, '간밤 주요 이슈 5개(시장 영향 포함)'));
   const reaction = firstUsefulLine(getSection(text, '미국 증시 요약(지수/금리/VIX/섹터)'));
   const watch = firstUsefulLine(getSection(text, '오늘 한국 투자자 체크포인트 3개'));
-  const lead = (item.overnightLead || '').slice(0, 140) || firstUsefulLine(getSection(text, '짧은 해설'));
+  const lead = (item.overnightLead || '').slice(0, 180) || firstUsefulLine(getSection(text, '짧은 해설'));
 
   grid.innerHTML = `
-    <div class="insight-card"><h4>오늘의 핵심 사건</h4><p>${lead}</p></div>
-    <div class="insight-card"><h4>시장이 반응한 자산</h4><p>${reaction}</p></div>
-    <div class="insight-card"><h4>확인할 변수</h4><p>${watch}</p></div>
-    <div class="insight-card"><h4>투자 포지션 참고</h4><p>${issue}</p></div>
+    <article class="insight-card"><h4>01. 오늘의 핵심 사건</h4><p>${lead}</p></article>
+    <article class="insight-card"><h4>02. 시장이 반응한 자산</h4><p>${reaction}</p></article>
+    <article class="insight-card"><h4>03. 확인할 변수</h4><p>${watch}</p></article>
+    <article class="insight-card"><h4>04. 투자 포지션 참고</h4><p>${issue}</p></article>
   `;
 }
 
