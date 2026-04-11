@@ -93,10 +93,6 @@ async function renderLatest(item) {
       </div>
     </div>
 
-    <div class="core-three">
-      <h3>오늘의 핵심 3줄</h3>
-      <ol>${core.map(c => `<li>${c}</li>`).join('')}</ol>
-    </div>
   `;
 }
 
