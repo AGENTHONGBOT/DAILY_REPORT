@@ -53,6 +53,35 @@ function removeCoreThreeSection(text) {
   return text.replace(re, '\n').replace(/\n{3,}/g, '\n\n').trim();
 }
 
+function getSection(text, title) {
+  const escaped = title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(`## ${escaped}([\\s\\S]*?)(?=\\n## |$)`);
+  const m = text.match(re);
+  return m ? m[1].trim() : '';
+}
+
+function firstUsefulLine(block) {
+  if (!block) return '데이터 확인 중';
+  const lines = block.split('\n').map(x => x.trim()).filter(Boolean);
+  const clean = lines.find(l => !l.startsWith('-') && !l.startsWith('1)') && !l.startsWith('1.') ) || lines[0];
+  return (clean || '').replace(/^[-\d\.)\s]+/, '').slice(0, 130);
+}
+
+function renderInsights(item, text) {
+  const grid = document.getElementById('insight-grid');
+  const issue = firstUsefulLine(getSection(text, '간밤 주요 이슈 5개(시장 영향 포함)'));
+  const reaction = firstUsefulLine(getSection(text, '미국 증시 요약(지수/금리/VIX/섹터)'));
+  const watch = firstUsefulLine(getSection(text, '오늘 한국 투자자 체크포인트 3개'));
+  const lead = (item.overnightLead || '').slice(0, 140) || firstUsefulLine(getSection(text, '짧은 해설'));
+
+  grid.innerHTML = `
+    <div class="insight-card"><h4>Top Story</h4><p>${lead}</p></div>
+    <div class="insight-card"><h4>Market Reaction</h4><p>${reaction}</p></div>
+    <div class="insight-card"><h4>Key Issue</h4><p>${issue}</p></div>
+    <div class="insight-card"><h4>Watch Now</h4><p>${watch}</p></div>
+  `;
+}
+
 async function renderLatest(item) {
   const latest = document.getElementById('latest');
   let stats = {
@@ -105,8 +134,11 @@ async function showPost(item) {
     target.textContent = removeCoreThreeSection(txt)
       .replace(/\*\*/g, '')
       .replace(/\t/g, '  ');
+    renderInsights(item, txt);
   } catch {
     target.textContent = '본문을 불러오지 못했습니다.';
+    const grid = document.getElementById('insight-grid');
+    if (grid) grid.textContent = '인사이트를 불러오지 못했습니다.';
   }
 }
 
