@@ -75,10 +75,10 @@ function renderInsights(item, text) {
   const lead = (item.overnightLead || '').slice(0, 140) || firstUsefulLine(getSection(text, '짧은 해설'));
 
   grid.innerHTML = `
-    <div class="insight-card"><h4>Top Story</h4><p>${lead}</p></div>
-    <div class="insight-card"><h4>Market Reaction</h4><p>${reaction}</p></div>
-    <div class="insight-card"><h4>Key Issue</h4><p>${issue}</p></div>
-    <div class="insight-card"><h4>Watch Now</h4><p>${watch}</p></div>
+    <div class="insight-card"><h4>오늘의 핵심 사건</h4><p>${lead}</p></div>
+    <div class="insight-card"><h4>시장이 반응한 자산</h4><p>${reaction}</p></div>
+    <div class="insight-card"><h4>확인할 변수</h4><p>${watch}</p></div>
+    <div class="insight-card"><h4>투자 포지션 참고</h4><p>${issue}</p></div>
   `;
 }
 

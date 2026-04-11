@@ -32,8 +32,8 @@ li:last-child{ border-bottom:none; }
 .lead-box p{margin:0; line-height:1.65; color:#dbeafe; font-size:14px;}
 #insight-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px;}
 .insight-card{border:1px solid #334155; background:#0b1220; border-radius:12px; padding:12px;}
-.insight-card h4{margin:0 0 6px; font-size:13px; color:#93c5fd; letter-spacing:.02em;}
-.insight-card p{margin:0; color:#e2e8f0; font-size:14px; line-height:1.55;}
+.insight-card h4{margin:0 0 6px; font-size:13px; color:#93c5fd; letter-spacing:.02em; font-weight:700;}
+.insight-card p{margin:0; color:#e2e8f0; font-size:14px; line-height:1.6;}
 #post-view{line-height:1.75; white-space:pre-wrap; max-height:720px; overflow:auto; font-size:15px; color:#e2e8f0;}
 footer { text-align:center; padding: 18px; color:#9ca3af; }
 @media (max-width:700px){ h1{font-size:26px;} header{padding:24px 16px;} #insight-grid{grid-template-columns:1fr;} }
