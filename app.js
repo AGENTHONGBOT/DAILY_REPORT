@@ -69,16 +69,26 @@ function firstUsefulLine(block) {
 
 function renderInsights(item, text) {
   const grid = document.getElementById('insight-grid');
-  const issue = firstUsefulLine(getSection(text, '간밤 주요 이슈 5개(시장 영향 포함)'));
-  const reaction = firstUsefulLine(getSection(text, '미국 증시 요약(지수/금리/VIX/섹터)'));
-  const watch = firstUsefulLine(getSection(text, '오늘 한국 투자자 체크포인트 3개'));
-  const lead = (item.overnightLead || '').slice(0, 180) || firstUsefulLine(getSection(text, '짧은 해설'));
+
+  const fallback = {
+    topStory: (item.overnightLead || '').slice(0, 180) || firstUsefulLine(getSection(text, '짧은 해설')),
+    marketReaction: firstUsefulLine(getSection(text, '미국 증시 요약(지수/금리/VIX/섹터)')),
+    watchNow: firstUsefulLine(getSection(text, '오늘 한국 투자자 체크포인트 3개')),
+    positioning: firstUsefulLine(getSection(text, '간밤 주요 이슈 5개(시장 영향 포함)'))
+  };
+
+  const data = {
+    topStory: item?.insights?.topStory || fallback.topStory,
+    marketReaction: item?.insights?.marketReaction || fallback.marketReaction,
+    watchNow: item?.insights?.watchNow || fallback.watchNow,
+    positioning: item?.insights?.positioning || fallback.positioning
+  };
 
   grid.innerHTML = `
-    <article class="insight-card"><h4>01. 오늘의 핵심 사건</h4><p>${lead}</p></article>
-    <article class="insight-card"><h4>02. 시장이 반응한 자산</h4><p>${reaction}</p></article>
-    <article class="insight-card"><h4>03. 확인할 변수</h4><p>${watch}</p></article>
-    <article class="insight-card"><h4>04. 투자 포지션 참고</h4><p>${issue}</p></article>
+    <article class="insight-card"><h4>01. 오늘의 핵심 사건</h4><p>${data.topStory}</p></article>
+    <article class="insight-card"><h4>02. 시장이 반응한 자산</h4><p>${data.marketReaction}</p></article>
+    <article class="insight-card"><h4>03. 확인할 변수</h4><p>${data.watchNow}</p></article>
+    <article class="insight-card"><h4>04. 투자 포지션 참고</h4><p>${data.positioning}</p></article>
   `;
 }
 
