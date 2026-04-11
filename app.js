@@ -111,6 +111,13 @@ function renderInsights(item, text) {
   `;
 }
 
+function toneClass(chg) {
+  const s = String(chg || '').trim();
+  if (s.startsWith('+')) return 'up';
+  if (s.startsWith('-')) return 'down';
+  return 'flat';
+}
+
 async function renderLatest(item) {
   const latest = document.getElementById('latest');
   let stats = {
@@ -137,17 +144,17 @@ async function renderLatest(item) {
       <div class="idx-card">
         <span>S&P500</span>
         <strong>${stats.sp.level}</strong>
-        <em>${stats.sp.chg}</em>
+        <em class="${toneClass(stats.sp.chg)}">${stats.sp.chg}</em>
       </div>
       <div class="idx-card">
         <span>Nasdaq</span>
         <strong>${stats.nasdaq.level}</strong>
-        <em>${stats.nasdaq.chg}</em>
+        <em class="${toneClass(stats.nasdaq.chg)}">${stats.nasdaq.chg}</em>
       </div>
       <div class="idx-card">
         <span>Dow</span>
         <strong>${stats.dow.level}</strong>
-        <em>${stats.dow.chg}</em>
+        <em class="${toneClass(stats.dow.chg)}">${stats.dow.chg}</em>
       </div>
     </div>
 

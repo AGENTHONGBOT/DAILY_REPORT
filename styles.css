@@ -15,6 +15,9 @@ main { max-width: 1080px; margin: 24px auto; padding: 0 16px; display: grid; gap
 .idx-card span{display:block; color:#a5b4fc; font-size:13px; margin-bottom:6px;}
 .idx-card strong{display:block; font-size:24px; letter-spacing:.01em; margin-bottom:3px; color:#f8fafc;}
 .idx-card em{font-style:normal; color:#7dd3fc; font-size:15px; font-weight:600;}
+.idx-card em.up{color:#22c55e;}
+.idx-card em.down{color:#ef4444;}
+.idx-card em.flat{color:#94a3b8;}
 @media (max-width:700px){.index-strip{grid-template-columns:1fr;}}
 ul { list-style:none; padding:0; margin:0; }
 li { padding:10px 0; border-bottom:1px solid #1f2937; }
