@@ -67,28 +67,47 @@ function firstUsefulLine(block) {
   return (clean || '').replace(/^[-\d\.)\s]+/, '').slice(0, 130);
 }
 
+function renderSectionItems(items) {
+  return items.map(it => `
+    <article class="insight-item">
+      <h5>${it.title}</h5>
+      <p>${it.desc}</p>
+    </article>
+  `).join('');
+}
+
 function renderInsights(item, text) {
   const grid = document.getElementById('insight-grid');
 
   const fallback = {
-    topStory: (item.overnightLead || '').slice(0, 180) || firstUsefulLine(getSection(text, '짧은 해설')),
-    marketReaction: firstUsefulLine(getSection(text, '미국 증시 요약(지수/금리/VIX/섹터)')),
-    watchNow: firstUsefulLine(getSection(text, '오늘 한국 투자자 체크포인트 3개')),
-    positioning: firstUsefulLine(getSection(text, '간밤 주요 이슈 5개(시장 영향 포함)'))
+    topStory: [{ title: '핵심 사건 요약', desc: (item.overnightLead || '').slice(0, 180) || firstUsefulLine(getSection(text, '짧은 해설')) }],
+    marketReaction: [{ title: '자산 반응', desc: firstUsefulLine(getSection(text, '미국 증시 요약(지수/금리/VIX/섹터)')) }],
+    watchNow: [{ title: '체크 변수', desc: firstUsefulLine(getSection(text, '오늘 한국 투자자 체크포인트 3개')) }],
+    positioning: [{ title: '포지션 메모', desc: firstUsefulLine(getSection(text, '간밤 주요 이슈 5개(시장 영향 포함)')) }]
   };
 
-  const data = {
-    topStory: item?.insights?.topStory || fallback.topStory,
-    marketReaction: item?.insights?.marketReaction || fallback.marketReaction,
-    watchNow: item?.insights?.watchNow || fallback.watchNow,
-    positioning: item?.insights?.positioning || fallback.positioning
-  };
+  const sec = item?.insightSections || fallback;
 
   grid.innerHTML = `
-    <article class="insight-card"><h4>01. 오늘의 핵심 사건</h4><p>${data.topStory}</p></article>
-    <article class="insight-card"><h4>02. 시장이 반응한 자산</h4><p>${data.marketReaction}</p></article>
-    <article class="insight-card"><h4>03. 확인할 변수</h4><p>${data.watchNow}</p></article>
-    <article class="insight-card"><h4>04. 투자 포지션 참고</h4><p>${data.positioning}</p></article>
+    <section class="insight-section">
+      <div class="sec-head"><span>TOP STORY</span><strong>오늘의 핵심 사건</strong></div>
+      ${renderSectionItems(sec.topStory || fallback.topStory)}
+    </section>
+
+    <section class="insight-section">
+      <div class="sec-head"><span>MARKET REACTION</span><strong>시장이 반응한 자산</strong></div>
+      ${renderSectionItems(sec.marketReaction || fallback.marketReaction)}
+    </section>
+
+    <section class="insight-section">
+      <div class="sec-head"><span>WATCH NOW</span><strong>지금 확인할 변수</strong></div>
+      ${renderSectionItems(sec.watchNow || fallback.watchNow)}
+    </section>
+
+    <section class="insight-section">
+      <div class="sec-head"><span>POSITIONING</span><strong>투자 포지션 참고</strong></div>
+      ${renderSectionItems(sec.positioning || fallback.positioning)}
+    </section>
   `;
 }
 
