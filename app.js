@@ -1,5 +1,5 @@
 async function loadBriefings() {
-  const res = await fetch('./data/briefings.json');
+  const res = await fetch(`./data/briefings.json?v=${Date.now()}`, { cache: 'no-store' });
   return res.json();
 }
 
@@ -128,7 +128,7 @@ async function renderLatest(item) {
   let core = [];
 
   try {
-    const res = await fetch(item.file);
+    const res = await fetch(`${item.file}?v=${item.date}`, { cache: 'no-store' });
     const txt = await res.text();
     stats = extractIndexStats(txt, item);
     core = extractCoreThree(txt);
@@ -165,7 +165,7 @@ async function renderLatest(item) {
 async function showPost(item) {
   const target = document.getElementById('post-view');
   try {
-    const res = await fetch(item.file);
+    const res = await fetch(`${item.file}?v=${item.date}`, { cache: 'no-store' });
     const txt = await res.text();
     target.textContent = removeCoreThreeSection(txt)
       .replace(/\*\*/g, '')
