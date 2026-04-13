@@ -180,22 +180,47 @@ async function showPost(item) {
 
 function renderList(items) {
   const list = document.getElementById('briefing-list');
-  list.innerHTML = items.map((i, idx) => `
-    <li class="brief-item" data-idx="${idx}">
-      <div><strong>${i.date}</strong> - ${i.title}</div>
-      <div class="meta">${i.tags.join(', ')}</div>
-    </li>
-  `).join('');
+  const card = list.closest('.archive');
+  let visibleCount = Math.min(7, items.length);
 
-  [...list.querySelectorAll('.brief-item')].forEach((el) => {
-    el.addEventListener('click', () => {
-      [...list.querySelectorAll('.brief-item')].forEach(n => n.classList.remove('active'));
-      el.classList.add('active');
-      const item = items[Number(el.dataset.idx)];
-      showPost(item);
-      renderLatest(item);
+  const draw = () => {
+    const shown = items.slice(0, visibleCount);
+    list.innerHTML = shown.map((i, idx) => `
+      <li class="brief-item" data-idx="${idx}">
+        <div><strong>${i.date}</strong> - ${i.title}</div>
+        <div class="meta">${i.tags.join(', ')}</div>
+      </li>
+    `).join('');
+
+    [...list.querySelectorAll('.brief-item')].forEach((el) => {
+      el.addEventListener('click', () => {
+        [...list.querySelectorAll('.brief-item')].forEach(n => n.classList.remove('active'));
+        el.classList.add('active');
+        const item = items[Number(el.dataset.idx)];
+        showPost(item);
+        renderLatest(item);
+      });
     });
-  });
+
+    let moreBtn = document.getElementById('more-briefings');
+    if (visibleCount < items.length) {
+      if (!moreBtn) {
+        moreBtn = document.createElement('button');
+        moreBtn.id = 'more-briefings';
+        moreBtn.className = 'more-btn';
+        moreBtn.textContent = '더보기';
+        moreBtn.addEventListener('click', () => {
+          visibleCount = Math.min(visibleCount + 14, items.length);
+          draw();
+        });
+        card.appendChild(moreBtn);
+      }
+    } else if (moreBtn) {
+      moreBtn.remove();
+    }
+  };
+
+  draw();
 }
 
 (async () => {
