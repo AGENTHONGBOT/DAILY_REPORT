@@ -199,11 +199,22 @@ function renderList(items) {
 }
 
 (async () => {
-  const data = await loadBriefings();
-  await renderLatest(data[0]);
-  renderList(data);
-  showPost(data[0]);
+  try {
+    const data = await loadBriefings();
+    if (!Array.isArray(data) || data.length === 0) throw new Error('empty_data');
 
-  const first = document.querySelector('#briefing-list .brief-item');
-  if (first) first.classList.add('active');
+    await renderLatest(data[0]);
+    renderList(data);
+    showPost(data[0]);
+
+    const first = document.querySelector('#briefing-list .brief-item');
+    if (first) first.classList.add('active');
+  } catch (e) {
+    const latest = document.getElementById('latest');
+    const grid = document.getElementById('insight-grid');
+    const post = document.getElementById('post-view');
+    if (latest) latest.innerHTML = '<h2>오늘 브리핑</h2><p class="meta">데이터 로딩에 실패했습니다. 잠시 후 새로고침해 주세요.</p>';
+    if (grid) grid.textContent = '인사이트 데이터를 불러오지 못했습니다.';
+    if (post) post.textContent = '브리핑 본문을 불러오지 못했습니다.';
+  }
 })();
