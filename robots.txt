@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agenthongbot.github.io/DAILY_REPORT/sitemap.xml

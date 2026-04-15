@@ -76,6 +76,23 @@ function renderSectionItems(items) {
   `).join('');
 }
 
+function updateSeoMeta(item) {
+  const base = 'https://agenthongbot.github.io/DAILY_REPORT';
+  const title = `${item.date} 오늘 미국증시 요약 | ${safeText(item.title, '미국 증시 브리핑')}`;
+  const desc = `${(item.highlights || []).slice(0,2).join(' / ')} | 오늘 미국증시 요약`;
+  document.title = title;
+
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.setAttribute('content', desc.slice(0, 180));
+
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute('href', `${base}/posts/${item.date}/`);
+
+  const u = new URL(window.location.href);
+  u.searchParams.set('date', item.date);
+  history.replaceState({}, '', u.toString());
+}
+
 function renderInsights(item, text) {
   const grid = document.getElementById('insight-grid');
 
@@ -260,6 +277,7 @@ function renderList(items) {
         const item = items[Number(el.dataset.idx)];
         showPost(item);
         renderLatest(item);
+        updateSeoMeta(item);
       });
     });
 
@@ -289,12 +307,17 @@ function renderList(items) {
     const data = await loadBriefings();
     if (!Array.isArray(data) || data.length === 0) throw new Error('empty_data');
 
-    await renderLatest(data[0]);
-    renderList(data);
-    showPost(data[0]);
+    const qDate = new URLSearchParams(window.location.search).get('date');
+    const selected = data.find(x => x.date === qDate) || data[0];
 
-    const first = document.querySelector('#briefing-list .brief-item');
-    if (first) first.classList.add('active');
+    await renderLatest(selected);
+    renderList(data);
+    showPost(selected);
+    updateSeoMeta(selected);
+
+    const idx = data.findIndex(x => x.date === selected.date);
+    const active = document.querySelector(`#briefing-list .brief-item[data-idx="${idx}"]`);
+    if (active) active.classList.add('active');
   } catch (e) {
     const latest = document.getElementById('latest');
     const grid = document.getElementById('insight-grid');
