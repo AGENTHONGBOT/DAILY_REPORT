@@ -70,8 +70,8 @@ function firstUsefulLine(block) {
 function renderSectionItems(items) {
   return items.map(it => `
     <article class="insight-item">
-      <h5>${it.title}</h5>
-      <p>${it.desc}</p>
+      <h5>${safeText(it.title, '핵심 요약')}</h5>
+      <p>${safeText(it.desc, '상세 데이터 확인 중')}</p>
     </article>
   `).join('');
 }
@@ -79,8 +79,9 @@ function renderSectionItems(items) {
 function renderInsights(item, text) {
   const grid = document.getElementById('insight-grid');
 
+  const safeLead = safeText(item.overnightLead, '');
   const fallback = {
-    topStory: [{ title: '핵심 사건 요약', desc: (item.overnightLead || '').slice(0, 180) || firstUsefulLine(getSection(text, '짧은 해설')) }],
+    topStory: [{ title: '핵심 사건 요약', desc: safeLead.slice(0, 180) || firstUsefulLine(getSection(text, '짧은 해설')) }],
     marketReaction: [{ title: '자산 반응', desc: firstUsefulLine(getSection(text, '미국 증시 요약(지수/금리/VIX/섹터)')) }],
     watchNow: [{ title: '체크 변수', desc: firstUsefulLine(getSection(text, '오늘 한국 투자자 체크포인트 3개')) }],
     positioning: [{ title: '포지션 메모', desc: firstUsefulLine(getSection(text, '간밤 주요 이슈 5개(시장 영향 포함)')) }]
@@ -118,6 +119,15 @@ function toneClass(chg) {
   return 'flat';
 }
 
+function looksCorrupted(text) {
+  const s = String(text || '');
+  return /\?{2,}/.test(s);
+}
+
+function safeText(text, fallback = '데이터 확인 중') {
+  return looksCorrupted(text) ? fallback : text;
+}
+
 async function renderLatest(item) {
   const latest = document.getElementById('latest');
   let stats = {
@@ -136,9 +146,12 @@ async function renderLatest(item) {
     // keep defaults
   }
 
+  const safeTitle = safeText(item.title, `${item.date} 미국/글로벌 마켓 브리핑`);
+  const safeLead = safeText(item.overnightLead, '');
+
   latest.innerHTML = `
     <h2>오늘 브리핑 (${item.date})</h2>
-    <p class="meta">${item.title}</p>
+    <p class="meta">${safeTitle}</p>
 
     <div class="index-strip">
       <div class="idx-card">
@@ -158,7 +171,7 @@ async function renderLatest(item) {
       </div>
     </div>
 
-    ${item.overnightLead ? `<div class="lead-box"><h3>Overnight Lead</h3><p>${item.overnightLead}</p></div>` : ''}
+    ${safeLead ? `<div class="lead-box"><h3>Overnight Lead</h3><p>${safeLead}</p></div>` : ''}
   `;
 }
 
@@ -187,8 +200,8 @@ function renderList(items) {
     const shown = items.slice(0, visibleCount);
     list.innerHTML = shown.map((i, idx) => `
       <li class="brief-item" data-idx="${idx}">
-        <div><strong>${i.date}</strong> - ${i.title}</div>
-        <div class="meta">${i.tags.join(', ')}</div>
+        <div><strong>${i.date}</strong> - ${safeText(i.title, i.date + ' 브리핑')}</div>
+        <div class="meta">${(i.tags || []).map(t => safeText(t, '')).filter(Boolean).join(', ')}</div>
       </li>
     `).join('');
 
