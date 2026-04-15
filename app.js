@@ -128,6 +128,53 @@ function safeText(text, fallback = '데이터 확인 중') {
   return looksCorrupted(text) ? fallback : text;
 }
 
+function escapeHtml(s) {
+  return String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function renderPostReadable(text) {
+  const lines = text.split('\n').map(l => l.trimEnd());
+  const sectionTitles = new Set([
+    '간밤 주요 이슈 5개(시장 영향 포함)',
+    '미국 증시 요약(지수/금리/VIX/섹터)',
+    '오늘 한국 투자자 체크포인트 3개',
+    '짧은 해설',
+    'Overnight Lead',
+    '최종 점검 체크리스트'
+  ]);
+
+  let html = '';
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) {
+      html += '<div class="post-gap"></div>';
+      continue;
+    }
+
+    if (sectionTitles.has(line)) {
+      html += `<h3 class="post-sec-title">${escapeHtml(line)}</h3>`;
+      continue;
+    }
+
+    if (/^\d+\)\s+/.test(line)) {
+      html += `<p class="post-item-title">${escapeHtml(line)}</p>`;
+      continue;
+    }
+
+    if (/^-\s+/.test(line)) {
+      html += `<p class="post-bullet">${escapeHtml(line.replace(/^-\s+/, ''))}</p>`;
+      continue;
+    }
+
+    html += `<p class="post-line">${escapeHtml(line)}</p>`;
+  }
+
+  return html;
+}
+
 async function renderLatest(item) {
   const latest = document.getElementById('latest');
   let stats = {
@@ -180,9 +227,10 @@ async function showPost(item) {
   try {
     const res = await fetch(`${item.file}?v=${item.date}`, { cache: 'no-store' });
     const txt = await res.text();
-    target.textContent = removeCoreThreeSection(txt)
+    const cleaned = removeCoreThreeSection(txt)
       .replace(/\*\*/g, '')
       .replace(/\t/g, '  ');
+    target.innerHTML = renderPostReadable(cleaned);
     renderInsights(item, txt);
   } catch {
     target.textContent = '본문을 불러오지 못했습니다.';
