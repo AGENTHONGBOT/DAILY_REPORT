@@ -1,17 +1,17 @@
 [
   {
     "date": "2026-04-17",
-    "title": "?? ?? ?? ?? ? ?? ?? ?? ??, ?? ?? ????? ??",
+    "title": "중동 휴전 연장 기대 속 미국 증시 완만한 상승",
     "highlights": [
-      "????? ?? ??? S&P500 7,041.28(+0.26%), Nasdaq 24,102.70(+0.36%), Dow 48,578.72(+0.24%)",
-      "WTI 89.68??(-1.76%), VIX 17.94(-1.27%)? ?? ???? ?? ?? ??",
-      "??? ?? ?? ?? ?? ??? ???? ???? ?? ? ??? ??? ??"
+      "중동 휴전 연장 기대로 S&P500 +0.26%, Nasdaq +0.36%, Dow +0.24% 상승",
+      "WTI 89.68달러(-1.76%), VIX 17.94(-1.27%)로 위험 프리미엄 완화",
+      "발언과 공식 집행조치 간극이 남아 있어 헤드라인 반전 시 변동성 확대 가능"
     ],
     "tags": [
-      "????",
-      "?????",
-      "??",
-      "???"
+      "미국증시",
+      "중동리스크",
+      "금리",
+      "변동성"
     ],
     "file": "./posts/2026-04-17.md",
     "indices": {
@@ -28,46 +28,102 @@
         "chg": "+0.24%"
       }
     },
-    "overnightLead": "??? ?? ?? ??? ?? ?? ?? ??? ??? ???, ??? ?? ?? ??? ?????? ??? ???? ??? ?? ???. ??? ?? ??? ?? ??? ??? VIX? ???, ? ?? ??? ???? ??? ?? ????. ?? ??? ?? ?? ??? ???? ??? ?? ??? ??? ??? ? ??. ???? ?? ?? ??? ?? ?? ?????, ???? ?? ?? ??? ??? ???? ??.",
+    "overnightLead": "간밤의 실제 중심 사건은 중동 휴전 연장 기대가 유지된 가운데, 미국의 공식 합의 여부가 불명확하다는 당국자 코멘트가 동시에 나온 점입니다. 시장은 기대 신호에 먼저 반응해 유가와 VIX를 낮췄고, 그 결과 기술주 중심으로 지수가 추가 상승했습니다. 다만 발언과 공식 집행 조치가 엇갈리면 현재의 안도 랠리는 빠르게 약해질 수 있습니다. 트럼프의 종전 임박 발언은 심리 개선 재료였지만, 지속성은 후속 공식 발표가 결정할 가능성이 큽니다.",
     "insightSections": {
       "topStory": [
         {
-          "title": "?? ??",
-          "desc": "?-?? ????? ?? ??? ???? ???? ??? ??????."
+          "title": "핵심 사건",
+          "desc": "미-이란 휴전·협상 기대가 유지되며 지정학 리스크 프리미엄이 낮아졌습니다."
         },
         {
-          "title": "?? ??",
-          "desc": "??? ??? ??????, ?? ?? ?? ??? ?? ??????."
+          "title": "중요한 구분",
+          "desc": "낙관 발언과 공식 집행조치는 다를 수 있어 랠리 지속성은 추가 확인이 필요합니다."
         }
       ],
       "marketReaction": [
         {
-          "title": "?? ??",
-          "desc": "?? ?? ??? VIX? ?? ????, ?? ???????? ???? ??????."
+          "title": "자산 반응",
+          "desc": "유가와 VIX가 먼저 하락한 뒤 기술주·반도체로 매수세가 확산됐습니다."
         },
         {
-          "title": "??/??",
-          "desc": "S&P500 7,041.28(+0.26%), Nasdaq 24,102.70(+0.36%), Dow 48,578.72(+0.24%), ? 10?? 4.31%, VIX 17.94???."
+          "title": "지수/금리",
+          "desc": "S&P500 7,041.28(+0.26%), Nasdaq 24,102.70(+0.36%), Dow 48,578.72(+0.24%), 미 10년물 4.31%, VIX 17.94입니다."
         }
       ],
       "watchNow": [
         {
-          "title": "?? ?? ??",
-          "desc": "?? ?? ?? ? ??????? ?? ??? ?? ? ???? ??? ? ????."
+          "title": "공식 발표 문구",
+          "desc": "휴전 연장 관련 공식 문구 수위가 기대를 뒷받침하는지 확인이 필요합니다."
         },
         {
-          "title": "????? ??",
-          "desc": "?? ??? ?? ??? ?? ???, ?? ?? ????? ???? ?????? ??? ?????."
+          "title": "유가·환율 동행",
+          "desc": "유가 반등과 원/달러 상승이 겹치면 한국장 변동성이 재확대될 수 있습니다."
         }
       ],
       "positioning": [
         {
-          "title": "???? ??",
-          "desc": "??? ???? ????????? ?? ?? ?? ? ?? ??? ?????."
+          "title": "추격보다 확인 매수",
+          "desc": "시초가 추격보다 1~2시간 수급 확인 후 분할 진입이 유리합니다."
         },
         {
-          "title": "??? ??? ??",
-          "desc": "???? ?? ??? ??? ?? ???? ?? ??? ??? ?? ??? ?????."
+          "title": "민감 업종 리스크 관리",
+          "desc": "반도체·에너지 등 민감 업종은 비중과 손절 규칙을 짧게 운용하세요."
+        }
+      ]
+    },
+    "title_en": "US stocks edge higher as ceasefire-extension hopes hold",
+    "highlights_en": [
+      "Ceasefire-extension hopes supported a broad move: S&P500 +0.26%, Nasdaq +0.36%, Dow +0.24%",
+      "WTI at 89.68 (-1.76%) and VIX at 17.94 (-1.27%) signaled lower short-term risk premium",
+      "Gap between commentary and formal execution remains a key volatility risk"
+    ],
+    "tags_en": [
+      "US Equities",
+      "Middle East Risk",
+      "Rates",
+      "Volatility"
+    ],
+    "file_en": "./posts/2026-04-17.en.md",
+    "overnightLead_en": "The core overnight setup was a split signal: ceasefire-extension optimism stayed alive, but formal U.S. agreement certainty remained unclear. Markets priced the optimistic side first, pushing oil and VIX lower and supporting a tech-led advance. If commentary and formal execution diverge, this relief move can fade quickly. Durability likely depends on follow-up official wording.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Key event",
+          "desc": "Ceasefire/talks expectations remained in focus, easing geopolitical risk premium."
+        },
+        {
+          "title": "Critical distinction",
+          "desc": "Headline tone and formal execution are not the same, so trend durability still needs confirmation."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Asset chain",
+          "desc": "Oil and VIX fell first, then flows rotated into tech and semiconductors."
+        },
+        {
+          "title": "Index/rates snapshot",
+          "desc": "S&P500 7,041.28 (+0.26%), Nasdaq 24,102.70 (+0.36%), Dow 48,578.72 (+0.24%), UST10Y 4.31%, VIX 17.94."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Official wording",
+          "desc": "Watch whether formal statements confirm or dilute extension expectations."
+        },
+        {
+          "title": "Oil-FX combo",
+          "desc": "A simultaneous rebound in oil and USD/KRW can quickly reprice Korea risk."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Confirm before chasing",
+          "desc": "Prefer confirmation flows in the first 1–2 hours over open-gap chasing."
+        },
+        {
+          "title": "Risk controls on sensitive sectors",
+          "desc": "Use tighter sizing and stop rules on semis/energy and other headline-sensitive groups."
         }
       ]
     }
@@ -141,6 +197,46 @@
         {
           "title": "이벤트 리스크 관리",
           "desc": "뉴스 민감 업종은 비중을 짧게 운영하고 손절 규칙을 명확히 두는 전략이 필요합니다."
+        }
+      ]
+    },
+    "title_en": "US equities at fresh highs as renewed US-Iran talks optimism offsets event risk",
+    "highlights_en": [
+      "Renewed talks optimism pushed S&P500 +0.80% and Nasdaq +1.59% to fresh highs",
+      "UST10Y at 4.28% and VIX at 18.17 showed still-elevated but easing risk sentiment",
+      "Formal execution clarity remains limited, keeping headline reversal risk alive"
+    ],
+    "tags_en": [
+      "US Equities",
+      "Middle East Risk",
+      "Rates",
+      "Volatility"
+    ],
+    "file_en": "./posts/2026-04-16.en.md",
+    "overnightLead_en": "Markets reacted to renewed US-Iran talks optimism, with oil/volatility easing first and risk assets following. But formal execution confirmation around shipping/implementation remained limited, so relief pricing can reverse on headline changes. In short, sentiment improved faster than certainty.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Key event",
+          "desc": "Talks optimism reduced geopolitical premium."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Reaction path",
+          "desc": "Oil/VIX eased first, then indices and tech moved higher."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Formal confirmation",
+          "desc": "Watch official implementation language closely."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Risk-managed follow-through",
+          "desc": "Prefer confirmation-based scaling over chasing spikes."
         }
       ]
     }
