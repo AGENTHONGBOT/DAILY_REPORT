@@ -3,6 +3,91 @@ async function loadBriefings() {
   return res.json();
 }
 
+const I18N = {
+  ko: {
+    heroTitle: 'Global Macro & US Market Briefing',
+    heroSubtitle: '매일 09:00 KST 업데이트 · 핵심 이슈, 시장 반응, 투자 체크포인트를 한눈에',
+    coverage: 'Coverage: US Equities · Rates · FX · Commodities',
+    format: 'Format: Morning Brief + Actionable Checkpoints',
+    insightsTitle: '핵심 인사이트 대시보드',
+    navTopStory: '오늘의 핵심 사건',
+    navReaction: '시장이 반응한 자산',
+    navWatch: '확인할 변수',
+    navPositioning: '투자 포지션 참고',
+    viewerTitle: '오늘 브리핑 본문',
+    archiveTitle: '지난 브리핑',
+    archiveDesc: '날짜를 선택하면 본문이 위 영역에서 바로 바뀝니다.',
+    latestTitle: '오늘 브리핑',
+    loadingInsight: '분석을 불러오는 중...',
+    loadingPost: '브리핑을 불러오는 중...',
+    more: '더보기',
+    topStoryHead: '오늘의 핵심 사건',
+    reactionHead: '시장이 반응한 자산',
+    watchHead: '지금 확인할 변수',
+    positioningHead: '투자 포지션 참고',
+    engFallback: ''
+  },
+  en: {
+    heroTitle: 'Global Macro & US Market Briefing',
+    heroSubtitle: 'Updated daily at 09:00 KST · Key events, market reaction, and actionable checkpoints',
+    coverage: 'Coverage: US Equities · Rates · FX · Commodities',
+    format: 'Format: Morning Brief + Actionable Checkpoints',
+    insightsTitle: 'Key Insights Dashboard',
+    navTopStory: 'Top Story',
+    navReaction: 'Market Reaction',
+    navWatch: 'Watch Now',
+    navPositioning: 'Positioning',
+    viewerTitle: 'Today\'s Briefing',
+    archiveTitle: 'Past Briefings',
+    archiveDesc: 'Select a date to load that briefing above.',
+    latestTitle: 'Today\'s Briefing',
+    loadingInsight: 'Loading insights...',
+    loadingPost: 'Loading briefing...',
+    more: 'Load more',
+    topStoryHead: 'Top Story',
+    reactionHead: 'Market Reaction',
+    watchHead: 'Watch Now',
+    positioningHead: 'Positioning',
+    engFallback: 'English post is not yet available for this date. Showing Korean original.'
+  }
+};
+
+let currentLang = new URLSearchParams(window.location.search).get('lang') || localStorage.getItem('site_lang') || 'ko';
+if (!I18N[currentLang]) currentLang = 'ko';
+let currentItem = null;
+
+function t(key) {
+  return (I18N[currentLang] && I18N[currentLang][key]) || key;
+}
+
+function localized(item, key) {
+  if (currentLang === 'en' && item?.[`${key}_en`]) return item[`${key}_en`];
+  return item?.[key];
+}
+
+function applyStaticI18n() {
+  const ids = {
+    'hero-title': 'heroTitle',
+    'hero-subtitle': 'heroSubtitle',
+    'hero-coverage': 'coverage',
+    'hero-format': 'format',
+    'insights-title': 'insightsTitle',
+    'nav-topstory': 'navTopStory',
+    'nav-reaction': 'navReaction',
+    'nav-watch': 'navWatch',
+    'nav-positioning': 'navPositioning',
+    'viewer-title': 'viewerTitle',
+    'archive-title': 'archiveTitle',
+    'archive-desc': 'archiveDesc'
+  };
+  for (const [id, key] of Object.entries(ids)) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t(key);
+  }
+  const sel = document.getElementById('lang-select');
+  if (sel) sel.value = currentLang;
+}
+
 function extractIndexStats(text, item) {
   // Prefer explicit structured fields when present
   if (item?.indices?.sp || item?.indices?.nasdaq || item?.indices?.dow) {
@@ -70,16 +155,22 @@ function firstUsefulLine(block) {
 function renderSectionItems(items) {
   return items.map(it => `
     <article class="insight-item">
-      <h5>${safeText(it.title, '핵심 요약')}</h5>
-      <p>${safeText(it.desc, '상세 데이터 확인 중')}</p>
+      <h5>${safeText(it.title, currentLang === 'en' ? 'Key takeaway' : '핵심 요약')}</h5>
+      <p>${safeText(it.desc, currentLang === 'en' ? 'Checking details' : '상세 데이터 확인 중')}</p>
     </article>
   `).join('');
 }
 
 function updateSeoMeta(item) {
   const base = 'https://agenthongbot.github.io/DAILY_REPORT';
-  const title = `${item.date} 오늘 미국증시 요약 | ${safeText(item.title, '미국 증시 브리핑')}`;
-  const desc = `${(item.highlights || []).slice(0,2).join(' / ')} | 오늘 미국증시 요약`;
+  const itemTitle = safeText(localized(item, 'title'), currentLang === 'en' ? 'US Market Briefing' : '미국 증시 브리핑');
+  const hls = localized(item, 'highlights') || item.highlights || [];
+  const title = currentLang === 'en'
+    ? `${item.date} US Market Summary | ${itemTitle}`
+    : `${item.date} 오늘 미국증시 요약 | ${itemTitle}`;
+  const desc = currentLang === 'en'
+    ? `${hls.slice(0,2).join(' / ')} | US market summary`
+    : `${hls.slice(0,2).join(' / ')} | 오늘 미국증시 요약`;
   document.title = title;
 
   const meta = document.querySelector('meta[name="description"]');
@@ -90,40 +181,41 @@ function updateSeoMeta(item) {
 
   const u = new URL(window.location.href);
   u.searchParams.set('date', item.date);
+  u.searchParams.set('lang', currentLang);
   history.replaceState({}, '', u.toString());
 }
 
 function renderInsights(item, text) {
   const grid = document.getElementById('insight-grid');
 
-  const safeLead = safeText(item.overnightLead, '');
+  const safeLead = safeText(localized(item, 'overnightLead') || item.overnightLead, '');
   const fallback = {
-    topStory: [{ title: '핵심 사건 요약', desc: safeLead.slice(0, 180) || firstUsefulLine(getSection(text, '짧은 해설')) }],
-    marketReaction: [{ title: '자산 반응', desc: firstUsefulLine(getSection(text, '미국 증시 요약(지수/금리/VIX/섹터)')) }],
-    watchNow: [{ title: '체크 변수', desc: firstUsefulLine(getSection(text, '오늘 한국 투자자 체크포인트 3개')) }],
-    positioning: [{ title: '포지션 메모', desc: firstUsefulLine(getSection(text, '간밤 주요 이슈 5개(시장 영향 포함)')) }]
+    topStory: [{ title: currentLang === 'en' ? 'Key event' : '핵심 사건 요약', desc: safeLead.slice(0, 180) || firstUsefulLine(getSection(text, '짧은 해설')) }],
+    marketReaction: [{ title: currentLang === 'en' ? 'Asset reaction' : '자산 반응', desc: firstUsefulLine(getSection(text, '미국 증시 요약(지수/금리/VIX/섹터)')) }],
+    watchNow: [{ title: currentLang === 'en' ? 'What to watch' : '체크 변수', desc: firstUsefulLine(getSection(text, '오늘 한국 투자자 체크포인트 3개')) }],
+    positioning: [{ title: currentLang === 'en' ? 'Positioning note' : '포지션 메모', desc: firstUsefulLine(getSection(text, '간밤 주요 이슈 5개(시장 영향 포함)')) }]
   };
 
-  const sec = item?.insightSections || fallback;
+  const sec = (currentLang === 'en' && item?.insightSections_en) ? item.insightSections_en : (item?.insightSections || fallback);
 
   grid.innerHTML = `
     <section class="insight-section">
-      <div class="sec-head"><span>TOP STORY</span><strong>오늘의 핵심 사건</strong></div>
+      <div class="sec-head"><span>TOP STORY</span><strong>${t('topStoryHead')}</strong></div>
       ${renderSectionItems(sec.topStory || fallback.topStory)}
     </section>
 
     <section class="insight-section">
-      <div class="sec-head"><span>MARKET REACTION</span><strong>시장이 반응한 자산</strong></div>
+      <div class="sec-head"><span>MARKET REACTION</span><strong>${t('reactionHead')}</strong></div>
       ${renderSectionItems(sec.marketReaction || fallback.marketReaction)}
     </section>
 
     <section class="insight-section">
-      <div class="sec-head"><span>WATCH NOW</span><strong>지금 확인할 변수</strong></div>
+      <div class="sec-head"><span>WATCH NOW</span><strong>${t('watchHead')}</strong></div>
       ${renderSectionItems(sec.watchNow || fallback.watchNow)}
     </section>
 
     <section class="insight-section">
-      <div class="sec-head"><span>POSITIONING</span><strong>투자 포지션 참고</strong></div>
+      <div class="sec-head"><span>POSITIONING</span><strong>${t('positioningHead')}</strong></div>
       ${renderSectionItems(sec.positioning || fallback.positioning)}
     </section>
   `;
@@ -160,7 +252,12 @@ function renderPostReadable(text) {
     '오늘 한국 투자자 체크포인트 3개',
     '짧은 해설',
     'Overnight Lead',
-    '최종 점검 체크리스트'
+    '최종 점검 체크리스트',
+    'Top 5 Overnight Issues (with market impact)',
+    'US Market Summary (indices/rates/VIX/sectors)',
+    '3 Checkpoints for Korean Investors Today',
+    'Brief Commentary',
+    'Final Checklist'
   ]);
 
   let html = '';
@@ -210,11 +307,11 @@ async function renderLatest(item) {
     // keep defaults
   }
 
-  const safeTitle = safeText(item.title, `${item.date} 미국/글로벌 마켓 브리핑`);
-  const safeLead = safeText(item.overnightLead, '');
+  const safeTitle = safeText(localized(item, 'title') || item.title, `${item.date} ${currentLang === 'en' ? 'US/Global Market Briefing' : '미국/글로벌 마켓 브리핑'}`);
+  const safeLead = safeText(localized(item, 'overnightLead') || item.overnightLead, '');
 
   latest.innerHTML = `
-    <h2>오늘 브리핑 (${item.date})</h2>
+    <h2>${t('latestTitle')} (${item.date})</h2>
     <p class="meta">${safeTitle}</p>
 
     <div class="index-strip">
@@ -242,17 +339,21 @@ async function renderLatest(item) {
 async function showPost(item) {
   const target = document.getElementById('post-view');
   try {
-    const res = await fetch(`${item.file}?v=${item.date}`, { cache: 'no-store' });
+    const file = (currentLang === 'en' && item.file_en) ? item.file_en : item.file;
+    const res = await fetch(`${file}?v=${item.date}`, { cache: 'no-store' });
     const txt = await res.text();
     const cleaned = removeCoreThreeSection(txt)
       .replace(/\*\*/g, '')
       .replace(/\t/g, '  ');
-    target.innerHTML = renderPostReadable(cleaned);
+    const langNote = (currentLang === 'en' && !item.file_en && t('engFallback'))
+      ? `<div class="lang-note">${escapeHtml(t('engFallback'))}</div>`
+      : '';
+    target.innerHTML = `${langNote}${renderPostReadable(cleaned)}`;
     renderInsights(item, txt);
   } catch {
-    target.textContent = '본문을 불러오지 못했습니다.';
+    target.textContent = currentLang === 'en' ? 'Failed to load briefing body.' : '본문을 불러오지 못했습니다.';
     const grid = document.getElementById('insight-grid');
-    if (grid) grid.textContent = '인사이트를 불러오지 못했습니다.';
+    if (grid) grid.textContent = currentLang === 'en' ? 'Failed to load insights.' : '인사이트를 불러오지 못했습니다.';
   }
 }
 
@@ -265,8 +366,8 @@ function renderList(items) {
     const shown = items.slice(0, visibleCount);
     list.innerHTML = shown.map((i, idx) => `
       <li class="brief-item" data-idx="${idx}">
-        <div><strong>${i.date}</strong> - ${safeText(i.title, i.date + ' 브리핑')}</div>
-        <div class="meta">${(i.tags || []).map(t => safeText(t, '')).filter(Boolean).join(', ')}</div>
+        <div><strong>${i.date}</strong> - ${safeText(localized(i, 'title') || i.title, i.date + (currentLang === 'en' ? ' Briefing' : ' 브리핑'))}</div>
+        <div class="meta">${((currentLang === 'en' && i.tags_en) ? i.tags_en : (i.tags || [])).map(t => safeText(t, '')).filter(Boolean).join(', ')}</div>
       </li>
     `).join('');
 
@@ -275,6 +376,7 @@ function renderList(items) {
         [...list.querySelectorAll('.brief-item')].forEach(n => n.classList.remove('active'));
         el.classList.add('active');
         const item = items[Number(el.dataset.idx)];
+        currentItem = item;
         showPost(item);
         renderLatest(item);
         updateSeoMeta(item);
@@ -287,13 +389,13 @@ function renderList(items) {
         moreBtn = document.createElement('button');
         moreBtn.id = 'more-briefings';
         moreBtn.className = 'more-btn';
-        moreBtn.textContent = '더보기';
         moreBtn.addEventListener('click', () => {
           visibleCount = Math.min(visibleCount + 14, items.length);
           draw();
         });
         card.appendChild(moreBtn);
       }
+      moreBtn.textContent = t('more');
     } else if (moreBtn) {
       moreBtn.remove();
     }
@@ -304,12 +406,15 @@ function renderList(items) {
 
 (async () => {
   try {
+    applyStaticI18n();
     const data = await loadBriefings();
     if (!Array.isArray(data) || data.length === 0) throw new Error('empty_data');
 
-    const qDate = new URLSearchParams(window.location.search).get('date');
+    const q = new URLSearchParams(window.location.search);
+    const qDate = q.get('date');
     const selected = data.find(x => x.date === qDate) || data[0];
 
+    currentItem = selected;
     await renderLatest(selected);
     renderList(data);
     showPost(selected);
@@ -318,12 +423,29 @@ function renderList(items) {
     const idx = data.findIndex(x => x.date === selected.date);
     const active = document.querySelector(`#briefing-list .brief-item[data-idx="${idx}"]`);
     if (active) active.classList.add('active');
+
+    const sel = document.getElementById('lang-select');
+    if (sel) {
+      sel.addEventListener('change', () => {
+        currentLang = sel.value;
+        localStorage.setItem('site_lang', currentLang);
+        applyStaticI18n();
+        const item = currentItem || selected;
+        renderLatest(item);
+        renderList(data);
+        showPost(item);
+        updateSeoMeta(item);
+        const idx2 = data.findIndex(x => x.date === item.date);
+        const active2 = document.querySelector(`#briefing-list .brief-item[data-idx="${idx2}"]`);
+        if (active2) active2.classList.add('active');
+      });
+    }
   } catch (e) {
     const latest = document.getElementById('latest');
     const grid = document.getElementById('insight-grid');
     const post = document.getElementById('post-view');
-    if (latest) latest.innerHTML = '<h2>오늘 브리핑</h2><p class="meta">데이터 로딩에 실패했습니다. 잠시 후 새로고침해 주세요.</p>';
-    if (grid) grid.textContent = '인사이트 데이터를 불러오지 못했습니다.';
-    if (post) post.textContent = '브리핑 본문을 불러오지 못했습니다.';
+    if (latest) latest.innerHTML = `<h2>${t('latestTitle')}</h2><p class="meta">${currentLang === 'en' ? 'Failed to load data. Please refresh.' : '데이터 로딩에 실패했습니다. 잠시 후 새로고침해 주세요.'}</p>`;
+    if (grid) grid.textContent = currentLang === 'en' ? 'Failed to load insights.' : '인사이트 데이터를 불러오지 못했습니다.';
+    if (post) post.textContent = currentLang === 'en' ? 'Failed to load briefing body.' : '브리핑 본문을 불러오지 못했습니다.';
   }
 })();
