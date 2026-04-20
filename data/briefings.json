@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-04-20",
+    "title": "주말 확인 구간: 완화 기대 유지 vs 공식 집행 확인 공백",
+    "highlights": [
+      "최신 미국 종가 기준 3대지수 동반 상승: S&P500 +0.26%, Nasdaq +0.36%, Dow +0.24%",
+      "반응 경로는 중동 완화 기대 → 유가 하락 → VIX 하락 → 기술주 강세로 전개",
+      "공식 집행 조치 확인 공백이 남아 있어 월요일 아시아장 변동성 재확대 가능(추정)"
+    ],
+    "tags": [
+      "미국증시",
+      "중동리스크",
+      "금리",
+      "변동성"
+    ],
+    "file": "./posts/2026-04-20.md",
+    "indices": {
+      "sp": {
+        "level": "7,041.28",
+        "chg": "+0.26%"
+      },
+      "nasdaq": {
+        "level": "24,102.70",
+        "chg": "+0.36%"
+      },
+      "dow": {
+        "level": "48,578.72",
+        "chg": "+0.24%"
+      }
+    },
+    "overnightLead": "주말을 거친 시점의 핵심은, 중동 관련 완화 기대가 가격에는 남아 있지만 이를 뒷받침할 새 공식 집행 조치가 충분히 확인되지는 않았다는 점입니다. 그래서 시장은 일단 유가와 변동성 하락을 유지했지만, 확인 공백이 길어지면 안도 랠리가 약해질 리스크가 있습니다. 이번 구간은 사건 자체보다 사건의 공식화 속도가 자산 가격의 방향을 더 크게 좌우합니다. 월요일 아시아장은 추가 공식 문구의 유무에 따라 해석이 빠르게 바뀔 수 있습니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "완화 기대는 유지됐지만 공식 집행 조치 확인은 제한적이었습니다."
+        },
+        {
+          "title": "핵심 구분",
+          "desc": "발언과 실제 집행은 다를 수 있어 랠리 지속성은 추가 확인이 필요합니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "자산 반응 경로",
+          "desc": "중동 완화 기대가 유가와 VIX를 낮추고 기술주로 매수세가 확산됐습니다."
+        },
+        {
+          "title": "지수/금리 스냅샷",
+          "desc": "S&P500 7,041.28(+0.26%), Nasdaq 24,102.70(+0.36%), Dow 48,578.72(+0.24%), 미10년 4.31%, VIX 17.94입니다."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "공식 문구 확인",
+          "desc": "휴전·협상 관련 공식 발표 문구가 기대를 뒷받침하는지 확인이 필요합니다."
+        },
+        {
+          "title": "유가·환율 동행",
+          "desc": "유가 반등과 원/달러 상승이 겹치면 한국장 변동성 확대 가능성이 큽니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "추격보다 확인",
+          "desc": "시초가 추격보다 개장 초 수급 확인 후 분할 대응이 유리합니다."
+        },
+        {
+          "title": "민감 업종 리스크 관리",
+          "desc": "반도체·에너지 등 뉴스 민감 업종은 비중과 손절 규칙을 짧게 운용하세요."
+        }
+      ]
+    },
+    "title_en": "Weekend setup: de-escalation hopes hold, execution confirmation gap remains",
+    "highlights_en": [
+      "Latest U.S. close showed broad gains: S&P500 +0.26%, Nasdaq +0.36%, Dow +0.24%",
+      "Reaction chain stayed event-driven: de-escalation tone → lower oil → lower VIX → stronger tech",
+      "Limited fresh execution confirmation keeps Monday Asia volatility risk alive (estimate)"
+    ],
+    "tags_en": [
+      "US Equities",
+      "Middle East Risk",
+      "Rates",
+      "Volatility"
+    ],
+    "file_en": "./posts/2026-04-20.en.md",
+    "overnightLead_en": "The practical setup after the weekend is that de-escalation expectations in the Middle East are still in prices, while fresh formal execution signals remain limited. That keeps oil and volatility calmer for now, but the relief move can fade if confirmation gaps persist. In this regime, the speed of officialization matters more than headline tone alone. Monday Asia interpretation can flip quickly on a single formal update.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "De-escalation expectations held, but formal execution visibility remained limited."
+        },
+        {
+          "title": "Key distinction",
+          "desc": "Comments and execution are not equivalent, so durability still needs confirmation."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Asset path",
+          "desc": "Easier geopolitical tone lowered oil/VIX first, then supported tech-led equity strength."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,041.28 (+0.26%), Nasdaq 24,102.70 (+0.36%), Dow 48,578.72 (+0.24%), UST10Y 4.31%, VIX 17.94."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Official wording",
+          "desc": "Watch whether formal language confirms or dilutes de-escalation expectations."
+        },
+        {
+          "title": "Oil-FX combination",
+          "desc": "A rebound in oil with higher USD/KRW can quickly reprice Korea risk."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Confirm before chase",
+          "desc": "Prefer first-hour flow confirmation over opening-gap chasing."
+        },
+        {
+          "title": "Risk discipline in sensitive sectors",
+          "desc": "Use tighter sizing and stops in semis/energy and other headline-sensitive groups."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-04-17",
     "title": "중동 휴전 연장 기대 속 미국 증시 완만한 상승",
     "highlights": [
