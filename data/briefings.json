@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-04-21",
+    "title": "미국장 숨 고르기, 변동성만 먼저 상승",
+    "highlights": [
+      "최신 미국 종가 기준 3대지수는 약보합: S&P500 -0.24%, Nasdaq -0.26%, Dow -0.01%",
+      "VIX는 18.87로 +7.95% 올라 지수보다 경계 심리가 더 빠르게 확대",
+      "전쟁·제재 관련 새 공식 집행 조치 부재로 공격적 위험선호는 제한(추정)"
+    ],
+    "tags": [
+      "미국증시",
+      "변동성",
+      "금리",
+      "지정학"
+    ],
+    "file": "./posts/2026-04-21.md",
+    "indices": {
+      "sp": {
+        "level": "7,109.14",
+        "chg": "-0.24%"
+      },
+      "nasdaq": {
+        "level": "24,404.39",
+        "chg": "-0.26%"
+      },
+      "dow": {
+        "level": "49,442.56",
+        "chg": "-0.01%"
+      }
+    },
+    "overnightLead": "간밤 미국장은 숫자상으로는 약보합이었지만, 시장의 진짜 신호는 VIX 반등이었습니다. 전쟁·제재 같은 대형 이슈에서 새 공식 집행 조치가 나오지 않으면서, 투자자들은 공격적 베팅보다 관망을 택했습니다. 그래서 지수는 크게 흔들리지 않았지만 섹터 내부 강약이 뚜렷해졌고, 금리도 소폭 올라 경계 심리를 확인시켰습니다. 다만 오늘 중 공식 발표가 새로 나오면, 지금의 조용한 흐름은 빠르게 뒤집힐 수 있습니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "대형 지정학 이슈에서 새 공식 집행 조치가 확인되지 않아 시장이 관망 모드로 이동했습니다."
+        },
+        {
+          "title": "핵심 구분",
+          "desc": "발언과 실제 조치는 다를 수 있어, 헤드라인만으로 방향을 단정하기 어려운 구간입니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "사건 공백 속에서도 금리·VIX가 먼저 경계 신호를 냈고, 이후 지수는 약보합·섹터 차별화로 마감했습니다."
+        },
+        {
+          "title": "지수/금리 스냅샷",
+          "desc": "S&P500 7,109.14(-0.24%), Nasdaq 24,404.39(-0.26%), Dow 49,442.56(-0.01%), 미10년 4.25%, VIX 18.87입니다."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "공식 발표 확인",
+          "desc": "전쟁·제재 관련 공식 문구가 바뀌면 오늘 장중 위험선호가 빠르게 재평가될 수 있습니다."
+        },
+        {
+          "title": "원/달러-금리 조합",
+          "desc": "원/달러 상승과 미국 금리 상승이 겹치면 한국 주식 수급은 보수적으로 바뀌기 쉽습니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "추격보다 확인",
+          "desc": "시초가 추격보다 개장 초 수급과 환율 확인 뒤 분할 대응이 유리합니다."
+        },
+        {
+          "title": "업종 선택 우선",
+          "desc": "지수 방향보다 반도체·금융·방어주의 상대 강약에 비중을 맞추는 접근이 적합합니다."
+        }
+      ]
+    },
+    "title_en": "U.S. equities pause while volatility rises first",
+    "highlights_en": [
+      "Latest U.S. close was near-flat to slightly lower: S&P500 -0.24%, Nasdaq -0.26%, Dow -0.01%",
+      "VIX rose to 18.87 (+7.95%), showing faster repricing in caution than in index losses",
+      "No fresh major official execution step on war/sanctions pathways limited broad risk extension (estimate)"
+    ],
+    "tags_en": [
+      "US Equities",
+      "Volatility",
+      "Rates",
+      "Geopolitics"
+    ],
+    "file_en": "./posts/2026-04-21.en.md",
+    "overnightLead_en": "Overnight U.S. trading looked quiet on the index level, but the real shift was the rise in volatility. With no major fresh official execution step on war/sanctions pathways, investors avoided broad risk extension and stayed selective. That is why headline indices moved only slightly while sector dispersion widened and rates edged higher. The setup can flip quickly if a formal update arrives today, so durability remains conditional.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "No fresh major official execution step on key geopolitical routes kept markets in a wait-and-see mode."
+        },
+        {
+          "title": "Key distinction",
+          "desc": "Headline comments and executed policy are different, so follow-through needs formal confirmation."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Rates and VIX repriced first, then indices stayed near flat while sector divergence widened."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,109.14 (-0.24%), Nasdaq 24,404.39 (-0.26%), Dow 49,442.56 (-0.01%), UST10Y 4.25%, VIX 18.87."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Formal wording risk",
+          "desc": "Any official update on sanctions or conflict management can quickly reprice risk sentiment."
+        },
+        {
+          "title": "USD/KRW with U.S. yields",
+          "desc": "If both rise together, Korea equity flow can turn defensive faster."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Confirm before chase",
+          "desc": "Prefer first-hour confirmation on FX/flow before adding size."
+        },
+        {
+          "title": "Prioritize relative strength",
+          "desc": "In this tape, sector relative strength matters more than index direction alone."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-04-20",
     "title": "주말 이후 시장 안도 흐름 유지, 다만 공식 확인은 더 필요",
     "highlights": [
