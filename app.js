@@ -6,7 +6,7 @@ async function loadBriefings() {
 const I18N = {
   ko: {
     heroTitle: 'Global Macro & US Market Briefing',
-    heroSubtitle: '매일 09:00 KST 업데이트 · 핵심 이슈, 시장 반응, 투자 체크포인트를 한눈에',
+    heroSubtitle: '매일 08:00 KST 업데이트 · 핵심 이슈, 시장 반응, 투자 체크포인트를 한눈에',
     coverage: 'Coverage: US Equities · Rates · FX · Commodities',
     format: 'Format: Morning Brief + Actionable Checkpoints',
     insightsTitle: '핵심 인사이트 대시보드',
@@ -29,7 +29,7 @@ const I18N = {
   },
   en: {
     heroTitle: 'Global Macro & US Market Briefing',
-    heroSubtitle: 'Updated daily at 09:00 KST · Key events, market reaction, and actionable checkpoints',
+    heroSubtitle: 'Updated daily at 08:00 KST · Key events, market reaction, and actionable checkpoints',
     coverage: 'Coverage: US Equities · Rates · FX · Commodities',
     format: 'Format: Morning Brief + Actionable Checkpoints',
     insightsTitle: 'Key Insights Dashboard',
