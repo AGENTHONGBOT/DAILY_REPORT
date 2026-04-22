@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-04-23",
+    "title": "기술주 주도 반등, 금리 안정 속 위험선호 회복",
+    "highlights": [
+      "S&P500 +1.05%, Nasdaq +1.64%, Dow +0.69%로 3대 지수 동반 반등",
+      "미 10년물 4.294%로 거의 보합, VIX 18.92(-2.97%)로 경계 심리 완화",
+      "섹터는 기술·에너지 강세, 부동산·산업재 약세로 온도차 확대"
+    ],
+    "tags": [
+      "미국증시",
+      "금리",
+      "VIX",
+      "섹터로테이션"
+    ],
+    "file": "./posts/2026-04-23.md",
+    "indices": {
+      "sp": {
+        "level": "7,137.90",
+        "chg": "+1.05%"
+      },
+      "nasdaq": {
+        "level": "24,657.57",
+        "chg": "+1.64%"
+      },
+      "dow": {
+        "level": "49,490.03",
+        "chg": "+0.69%"
+      }
+    },
+    "overnightLead": "간밤 핵심 사건은 금리 급등이 멈춘 상태에서 기술주 중심 매수가 다시 붙었다는 점입니다. 시장은 유가가 높아도 당장 추가 충격이 없다고 판단하며 위험자산 비중을 소폭 늘렸습니다. 다만 새 공식 제재·봉쇄 집행이 확인되지 않은 구간이라, 발언과 실제 조치가 엇갈리면 분위기가 빠르게 뒤집힐 수 있습니다. 오늘은 유가와 미 10년물 상단, 그리고 VIX 재상승 여부가 흐름을 가를 가능성이 큽니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "금리가 급등하지 않자 기술주 중심으로 반등이 강화됐습니다."
+        },
+        {
+          "title": "핵심 구분",
+          "desc": "강한 발언과 공식 집행 조치를 분리해 봐야 장중 변동성을 줄일 수 있습니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "자산 반응 경로",
+          "desc": "금리 안정과 VIX 하락이 먼저 나오고, 이후 나스닥 중심 매수가 확산됐습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,137.90(+1.05%), Nasdaq 24,657.57(+1.64%), Dow 49,490.03(+0.69%), 미10년 4.294%, VIX 18.92입니다."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "유가 상단",
+          "desc": "WTI가 93~95달러로 재가속하면 물가·금리 부담이 다시 커질 수 있습니다."
+        },
+        {
+          "title": "SNS vs 공식 발표",
+          "desc": "SNS 발언보다 정부·당국의 실제 집행 문구를 우선 확인해야 합니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "추격보다 확인",
+          "desc": "시초가 추격보다 개장 초 환율·외국인 선물 흐름 확인 후 분할 대응이 유리합니다."
+        },
+        {
+          "title": "업종 분리 대응",
+          "desc": "반도체/기술 강세와 경기민감 약세를 분리해 비중을 조절하세요."
+        }
+      ]
+    },
+    "title_en": "Tech-led rebound as stable yields revive risk appetite",
+    "highlights_en": [
+      "All three major indices rebounded: S&P500 +1.05%, Nasdaq +1.64%, Dow +0.69%",
+      "UST10Y held near flat at 4.294% while VIX fell to 18.92 (-2.97%)",
+      "Sector dispersion widened: tech/energy outperformed, real estate/industrials lagged"
+    ],
+    "tags_en": [
+      "US Equities",
+      "Rates",
+      "VIX",
+      "Sector Rotation"
+    ],
+    "file_en": "./posts/2026-04-23.en.md",
+    "overnightLead_en": "The overnight lead was a tech-led rebound built on stable long-end yields rather than a broad macro shock fade. Markets tolerated still-firm oil because there was no immediate incremental disruption in execution terms. However, this setup can reverse quickly if formal actions diverge from public commentary. Today, watch oil upside, the UST10Y ceiling, and any VIX re-acceleration.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "With yields contained, tech-led buying returned across major indices."
+        },
+        {
+          "title": "Key distinction",
+          "desc": "Separate loud commentary from formal policy execution to read risk correctly."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Yield stability and lower VIX came first, then Nasdaq leadership widened."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,137.90 (+1.05%), Nasdaq 24,657.57 (+1.64%), Dow 49,490.03 (+0.69%), UST10Y 4.294%, VIX 18.92."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Oil ceiling",
+          "desc": "If WTI accelerates into 93-95, inflation and yield pressure can return quickly."
+        },
+        {
+          "title": "Social comments vs formal actions",
+          "desc": "Treat social-media comments separately from official enforcement measures."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Confirm before chase",
+          "desc": "Prefer first-hour FX/futures confirmation over opening-gap chasing."
+        },
+        {
+          "title": "Split by sector",
+          "desc": "Size differently between semis/tech strength and cyclical laggards."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-04-22",
     "title": "미국 증시 숨 고르기, 유가·금리 반등에 경계 심리 재개",
     "highlights": [
