@@ -1,17 +1,17 @@
 [
   {
     "date": "2026-04-22",
-    "title": "금리·변동성 동반 상승, 미국장 위험선호 후퇴",
+    "title": "미국 증시 숨 고르기, 유가·금리 반등에 경계 심리 재개",
     "highlights": [
-      "최신 미국 종가 기준 3대지수 하락: S&P500 -0.63%, Nasdaq -0.59%, Dow -0.59%",
-      "미 10년물 4.29%(+0.99%), VIX 19.50(+3.34%)로 주가보다 경계 신호가 먼저 강화",
-      "지정학 관련 강한 발언은 이어졌지만 새 공식 집행 조치는 제한적(추정)"
+      "S&P500 -0.63%, Nasdaq -0.59%, Dow -0.59%로 3대 지수 동반 하락",
+      "WTI 90.08달러(+0.52%), 미 10년물 4.29%, VIX 19.50(+3.34%)로 경계 심리 확대",
+      "지수는 약했지만 에너지 강세·기술/반도체 버팀으로 업종 차별화 지속"
     ],
     "tags": [
       "미국증시",
       "금리",
-      "변동성",
-      "지정학"
+      "유가",
+      "변동성"
     ],
     "file": "./posts/2026-04-22.md",
     "indices": {
@@ -28,78 +28,78 @@
         "chg": "-0.59%"
       }
     },
-    "overnightLead": "간밤 미국장은 지수 하락폭보다 금리와 변동성의 움직임이 더 중요했습니다. 새 대형 공식 조치가 나오지 않은 가운데, 시장은 좋아진 것도 완전히 나빠진 것도 아닌 구간으로 받아들이며 위험 노출을 줄였습니다. 그 결과 에너지는 상대적으로 버텼고 금리 민감 업종은 더 약해졌습니다. 다만 오늘 중 당국의 공식 집행 발표가 나오면, 현재의 보수적 흐름은 빠르게 뒤집힐 수 있습니다.",
+    "overnightLead": "간밤 시장은 상황이 급격히 나빠졌다기보다, 투자자들이 한 템포 쉬어가며 확인 모드로 전환한 흐름이었습니다. 유가와 미 10년물 금리가 함께 오르자 3대 지수는 소폭 하락했고, VIX는 다시 올라왔습니다. 다만 기술·반도체는 완전히 무너지지 않고 버텨 공포 장세보다는 경계 장세에 가깝습니다. 오늘은 유가와 금리가 추가로 오르는지, 아니면 다시 안정되는지가 분위기를 가를 가능성이 큽니다.",
     "insightSections": {
       "topStory": [
         {
           "title": "핵심 사건",
-          "desc": "미국 증시가 3대지수 동반 하락으로 마감했고, 금리와 VIX가 함께 올라 방어 심리가 강화됐습니다."
+          "desc": "유가와 금리가 같이 오르면서 시장이 공격적 매수에서 확인 모드로 전환했습니다."
         },
         {
-          "title": "핵심 구분",
-          "desc": "지정학 이슈에서는 강한 발언과 공식 집행 조치를 분리해서 봐야 하는 장세입니다."
+          "title": "쉽게 말하면",
+          "desc": "급락 공포보다 “지금은 조금 조심하자”는 분위기가 강해진 장이었습니다."
         }
       ],
       "marketReaction": [
         {
-          "title": "반응 경로",
-          "desc": "사건 불확실성 속에서 금리·VIX가 먼저 올랐고, 이후 지수와 금리 민감 섹터가 약해졌습니다."
+          "title": "자산 반응",
+          "desc": "3대 지수는 하락했지만, 에너지 강세와 기술/반도체 버팀이 동시에 나타났습니다."
         },
         {
-          "title": "지수/금리 스냅샷",
-          "desc": "S&P500 7,064.01(-0.63%), Nasdaq 24,259.96(-0.59%), Dow 49,149.38(-0.59%), 미10년 4.29%, VIX 19.50입니다."
+          "title": "숫자 요약",
+          "desc": "S&P500 7,064.01(-0.63%), Nasdaq 24,259.96(-0.59%), Dow 49,149.38(-0.59%), 미 10년물 4.29%, VIX 19.50입니다."
         }
       ],
       "watchNow": [
         {
-          "title": "공식 조치 확인",
-          "desc": "당국의 실제 집행 발표가 나오면 오늘 장중 위험선호 방향이 빠르게 바뀔 수 있습니다."
+          "title": "유가·환율 동행",
+          "desc": "유가 반등과 원/달러 상승이 겹치면 한국장 변동성이 빠르게 커질 수 있습니다."
         },
         {
-          "title": "원/달러-금리 조합",
-          "desc": "원/달러 상승과 미국 금리 상승이 겹치면 한국 주식 수급은 보수적으로 바뀌기 쉽습니다."
+          "title": "미 금리 상단",
+          "desc": "미 10년물이 4.3%대 위에서 안착하는지 여부가 기술주 체감을 좌우합니다."
         }
       ],
       "positioning": [
         {
-          "title": "확인 후 대응",
-          "desc": "시초가 추격보다 개장 초 환율·금리·외국인 선물 흐름 확인 후 분할 대응이 유리합니다."
+          "title": "추격보다 확인 매수",
+          "desc": "시초가 추격보다 개장 1~2시간 수급 확인 후 분할 진입이 유리합니다."
         },
         {
-          "title": "상대강도 중심",
-          "desc": "지수 방향보다 반도체와 에너지·가치주의 상대 강약을 중심으로 비중을 조절하세요."
+          "title": "업종별 대응",
+          "desc": "에너지 강세, 기술 버팀 같은 업종 온도차를 이용해 비중을 나눠 대응하세요."
         }
       ]
     },
-    "title_en": "Risk appetite cools as yields and volatility rise together",
+    "title_en": "US equities pause as oil and yields rebound, caution rises",
     "highlights_en": [
-      "All three U.S. major indices closed lower: S&P500 -0.63%, Nasdaq -0.59%, Dow -0.59%",
-      "UST10Y at 4.29% (+0.99%) and VIX at 19.50 (+3.34%) signaled a clearer defensive tone",
-      "Strong geopolitical comments continued, but fresh formal execution steps stayed limited (estimate)"
+      "All three major indices closed lower: S&P500 -0.63%, Nasdaq -0.59%, Dow -0.59%",
+      "WTI at 90.08 (+0.52%), UST10Y at 4.29%, VIX at 19.50 (+3.34%) signaled renewed caution",
+      "Index weakness coexisted with energy strength and relative resilience in tech/semis"
     ],
     "tags_en": [
       "US Equities",
       "Rates",
-      "Volatility",
-      "Geopolitics"
+      "Oil",
+      "Volatility"
     ],
     "file_en": "./posts/2026-04-22.en.md",
-    "overnightLead_en": "The headline index move looked moderate, but the real message overnight came from higher yields and volatility. With no fresh large formal execution step, investors treated the tape as neither clearly better nor clearly worse and trimmed risk at the margin. That kept energy relatively firm while rate-sensitive groups lagged. If an official implementation update appears later today, this defensive setup can reverse quickly.",
+    "overnightLead_en": "Overnight action looked more like a caution reset than a panic selloff. As oil and U.S. 10Y yields moved higher together, risk appetite cooled and major indices slipped modestly while VIX rose. Tech and semis still held up relatively well, pointing to selective positioning rather than broad liquidation. Today’s tone will likely depend on whether oil and yields keep climbing or stabilize.",
     "insightSections_en": {
       "topStory": [
         {
-          "title": "Core event",
-          "desc": "U.S. equities closed lower across all three major indices while yields and VIX moved higher."
+          "title": "Key event",
+          "desc": "Rising oil and yields pushed markets from aggressive buying into confirmation mode."
         },
         {
-          "title": "Key distinction",
-          "desc": "Markets continue to separate headline comments from formal execution actions."
+          "title": "Plain-English read",
+          "desc": "It was less “panic” and more “let’s slow down and reassess.”"
         }
       ],
       "marketReaction": [
         {
-          "title": "Transmission path",
-          "desc": "Rates and volatility repriced first, then equities weakened through broader sector divergence."
+          "title": "Asset reaction",
+          "desc": "Indices fell, but energy outperformed and tech/semis showed relative resilience."
         },
         {
           "title": "Snapshot",
@@ -108,22 +108,22 @@
       ],
       "watchNow": [
         {
-          "title": "Formal implementation risk",
-          "desc": "Any official execution update can quickly change intraday risk sentiment."
+          "title": "Oil + FX combo",
+          "desc": "If oil and USD/KRW rise together, Korea intraday volatility can expand quickly."
         },
         {
-          "title": "USD/KRW with U.S. yields",
-          "desc": "If both rise together, Korea equity flow can become more defensive."
+          "title": "Yield ceiling",
+          "desc": "Whether UST10Y stabilizes above the 4.3% area matters for tech sensitivity."
         }
       ],
       "positioning": [
         {
-          "title": "Confirm before chase",
-          "desc": "Prefer first-hour confirmation in FX/yields/foreign futures flow before adding size."
+          "title": "Confirm before chasing",
+          "desc": "Prefer first-1–2-hour flow confirmation over open-gap chasing."
         },
         {
-          "title": "Use relative strength",
-          "desc": "Focus on semis vs energy/value leadership rather than index direction alone."
+          "title": "Sector-based sizing",
+          "desc": "Use rotation signals (energy strength, tech resilience) to split exposure."
         }
       ]
     }
