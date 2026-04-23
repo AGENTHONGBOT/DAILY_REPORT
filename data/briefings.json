@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-04-24",
+    "title": "미국장 숨 고르기, 기술주 조정 속 실행 확인 장세",
+    "highlights": [
+      "S&P500 -0.41%, Nasdaq -0.89%, Dow -0.36%로 3대 지수 동반 하락",
+      "발언보다 공식 집행 조치 확인이 더 중요한 장세가 이어짐",
+      "유가→금리→지수 경로 점검이 오늘 한국장 대응의 핵심"
+    ],
+    "tags": [
+      "미국증시",
+      "글로벌이슈",
+      "금리",
+      "변동성"
+    ],
+    "file": "./posts/2026-04-24.md",
+    "indices": {
+      "sp": {
+        "level": "7,108.40",
+        "chg": "-0.41%"
+      },
+      "nasdaq": {
+        "level": "24,438.50",
+        "chg": "-0.89%"
+      },
+      "dow": {
+        "level": "49,310.32",
+        "chg": "-0.36%"
+      }
+    },
+    "overnightLead": "간밤 핵심은 미국 3대 지수가 동반 조정으로 쉬어갔다는 점입니다. 사건이 나오면 유가와 변동성이 먼저 반응하고, 그다음 금리와 지수가 따라가는 흐름이 다시 확인됐습니다. 시장은 강한 발언보다 실제 집행 조치를 더 크게 반영하는 모습이었고, 이 때문에 공식 문구 확인 전까지는 방향이 자주 흔들릴 수 있습니다. 오늘은 환율과 미 금리 상단, 그리고 관련 공식 발표 유무가 분위기를 뒤집는 변수입니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "미국 증시는 기술주 중심으로 숨 고르기에 들어갔습니다."
+        },
+        {
+          "title": "핵심 구분",
+          "desc": "강한 발언과 공식 집행 조치를 분리해서 봐야 방향 해석이 쉬워집니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "사건 헤드라인 뒤 유가·변동성, 금리, 지수 순으로 가격이 움직였습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,108.40 (-0.41%), Nasdaq 24,438.50 (-0.89%), Dow 49,310.32 (-0.36%)입니다."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "공식 발표 우선",
+          "desc": "SNS 발언보다 정부·당국의 공식 문구와 집행 여부를 먼저 확인하세요."
+        },
+        {
+          "title": "금리와 환율 동시 체크",
+          "desc": "미 10년물과 원/달러가 같이 오르면 한국 성장주 변동성이 커질 수 있습니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "추격보다 확인",
+          "desc": "개장 초 1시간 수급 확인 뒤 분할 대응이 유리합니다."
+        },
+        {
+          "title": "업종 분리 접근",
+          "desc": "반도체·인터넷과 방어주를 분리해 비중을 조절하세요."
+        }
+      ]
+    },
+    "title_en": "US equities pause as tech pulls back and execution risk stays in focus",
+    "highlights_en": [
+      "All three major indices closed lower: S&P500 -0.41%, Nasdaq -0.89%, Dow -0.36%",
+      "Markets kept prioritizing formal execution over headline rhetoric",
+      "Oil->yields->equity path remains the key framework for today’s Korea session"
+    ],
+    "tags_en": [
+      "US Equities",
+      "Global Issues",
+      "Rates",
+      "Volatility"
+    ],
+    "file_en": "./posts/2026-04-24.en.md",
+    "overnightLead_en": "The overnight lead was a broad U.S. equity pullback, with tech showing the larger reset after the recent rebound. The usual transmission chain was visible again: event headlines first moved oil and volatility, then yields, and finally index/sector pricing. Markets continued to treat formal actions as more important than strong commentary, which keeps direction unstable until official wording is confirmed. For today, watch USD/KRW, the UST10Y upper range, and whether any formal update changes the risk tone.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "U.S. equities moved into a tech-led consolidation phase."
+        },
+        {
+          "title": "Key distinction",
+          "desc": "Separate strong comments from formal execution to read risk correctly."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Headline event moves flowed through oil/volatility, then yields, then equities."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,108.40 (-0.41%), Nasdaq 24,438.50 (-0.89%), Dow 49,310.32 (-0.36%)."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Official wording first",
+          "desc": "Prioritize formal government language over social-media comments."
+        },
+        {
+          "title": "Rates + FX combo",
+          "desc": "If UST10Y and USD/KRW rise together, Korea growth volatility can expand."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Confirm before chase",
+          "desc": "Prefer first-hour flow confirmation before adding risk."
+        },
+        {
+          "title": "Split by sector",
+          "desc": "Size semis/internet separately from defensive groups."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-04-23",
     "title": "기술주 주도 반등, 금리 안정 속 위험선호 회복",
     "highlights": [
