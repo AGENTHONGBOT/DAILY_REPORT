@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-04-28",
+    "title": "금리 상단 경계 속 업종 장세, 금융 강세·반도체 숨고르기",
+    "highlights": [
+      "미국 3대 지수는 S&P500 +0.12%, Nasdaq +0.20%, Dow -0.13%로 완만한 위험선호 마감",
+      "호르무즈 관련 발언이 재부각됐지만 공식 집행 조치 확대는 아직 확인 제한(추정)",
+      "미 10년물 4.34%와 업종 차별화(금융 강세, 반도체 약세)가 오늘 한국장 핵심 변수"
+    ],
+    "tags": [
+      "미국증시",
+      "지정학",
+      "금리",
+      "섹터로테이션"
+    ],
+    "file": "./posts/2026-04-28.md",
+    "indices": {
+      "sp": {
+        "level": "7,173.91",
+        "chg": "+0.12%"
+      },
+      "nasdaq": {
+        "level": "24,887.10",
+        "chg": "+0.20%"
+      },
+      "dow": {
+        "level": "49,167.79",
+        "chg": "-0.13%"
+      }
+    },
+    "overnightLead": "간밤 핵심은 지수보다 업종이 먼저 방향을 말해줬다는 점입니다. 호르무즈 해협 관련 발언이 다시 부각됐지만, 시장은 공식 집행 조치 확인이 부족한 구간으로 보고 공포 확산보다 선별 대응을 택했습니다. 그래서 금융은 강했고 반도체는 쉬어갔고, 미 10년물은 4.34% 부근에서 상단 부담을 남겼습니다. 오늘 흐름은 금리와 원/달러가 동시에 위로 열리는지 여부가 가를 가능성이 큽니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "호르무즈 관련 발언 재부각과 FOMC·실적 대기 구간이 동시에 시장을 압박했습니다."
+        },
+        {
+          "title": "핵심 해석",
+          "desc": "말보다 공식 집행 조치 확인이 부족해 지수 추세보다 업종 선택 장세가 강화됐습니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "지정학 헤드라인이 유가·금리 기대를 흔든 뒤, 금융 강세와 반도체 약세로 가격이 분화됐습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,173.91(+0.12%), Nasdaq 24,887.10(+0.20%), Dow 49,167.79(-0.13%), UST10Y 4.34%, VIX 18.02입니다."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "공식 조치 확인",
+          "desc": "SNS/인터뷰 발언과 실제 제재·봉쇄 같은 공식 집행 조치를 분리해 확인하세요."
+        },
+        {
+          "title": "금리·환율 동행",
+          "desc": "미 10년물 상향 이탈과 원/달러 동반 상승이 나오면 한국 성장주 변동성이 커질 수 있습니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "주 시나리오",
+          "desc": "금리 상단 부담이 이어져 은행·가치주 상대강세, 반도체 단기 변동성 확대 구간으로 봅니다."
+        },
+        {
+          "title": "실행 힌트",
+          "desc": "3회 분할 진입을 유지하고, 미10년 4.38% 상향 + 원/달러 급등 동반 시 성장주 비중을 축소하세요."
+        }
+      ]
+    },
+    "title_en": "Rate ceiling watch: financials lead while semis pause",
+    "highlights_en": [
+      "US majors closed with mild risk-on tone: S&P500 +0.12%, Nasdaq +0.20%, Dow -0.13%",
+      "Hormuz-related commentary resurfaced, while broader formal enforcement expansion remained limited (estimate)",
+      "UST10Y at 4.34% and sector divergence (financials up, semis down) are the key inputs for Korea today"
+    ],
+    "tags_en": [
+      "US Equities",
+      "Geopolitics",
+      "Rates",
+      "Sector Rotation"
+    ],
+    "file_en": "./posts/2026-04-28.en.md",
+    "overnightLead_en": "The overnight signal came more from sector internals than from index direction. Hormuz-related commentary resurfaced, but with limited confirmation of broader formal execution, markets chose selective positioning over panic repricing. Financials outperformed while semiconductors paused, and UST10Y around 4.34% kept valuation pressure alive. Today likely hinges on whether yields and USD/KRW rise together.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "Hormuz-related headlines and a heavy FOMC/earnings week hit at the same time."
+        },
+        {
+          "title": "Core read",
+          "desc": "With limited formal execution confirmation, sector rotation mattered more than index direction."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Geopolitical headlines moved oil/rate expectations first, then split flows into financial strength and semi weakness."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,173.91 (+0.12%), Nasdaq 24,887.10 (+0.20%), Dow 49,167.79 (-0.13%), UST10Y 4.34%, VIX 18.02."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Official action first",
+          "desc": "Separate social/media commentary from executable sanctions, shipping, or military actions."
+        },
+        {
+          "title": "Rates-FX combination",
+          "desc": "If UST10Y and USD/KRW rise together, Korea growth volatility can expand quickly."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Base scenario",
+          "desc": "Rate ceiling pressure favors banks/value over late-chasing expensive semiconductors."
+        },
+        {
+          "title": "Execution hint",
+          "desc": "Use three tranches; if UST10Y >4.38% with sharp USD/KRW upside, cut growth exposure."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-04-27",
     "title": "주말 뉴스 해석 장세, 확인 후 대응이 수익률을 가른다",
     "highlights": [
