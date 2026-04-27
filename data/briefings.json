@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-04-27",
+    "title": "주말 뉴스 해석 장세, 확인 후 대응이 수익률을 가른다",
+    "highlights": [
+      "미국 주말 휴장으로 최신 지수 기준은 금요일 종가(S&P500 -0.41%, Nasdaq -0.89%, Dow -0.36%)",
+      "주말 중동 관련 발언은 확대됐지만 새 공식 집행 조치 확인은 제한적",
+      "오늘은 사건 확인 후 유가·변동성→금리→지수/섹터 경로 점검이 핵심"
+    ],
+    "tags": [
+      "미국증시",
+      "글로벌이슈",
+      "금리",
+      "변동성"
+    ],
+    "file": "./posts/2026-04-27.md",
+    "indices": {
+      "sp": {
+        "level": "7,108.40",
+        "chg": "-0.41%"
+      },
+      "nasdaq": {
+        "level": "24,438.50",
+        "chg": "-0.89%"
+      },
+      "dow": {
+        "level": "49,310.32",
+        "chg": "-0.36%"
+      }
+    },
+    "overnightLead": "주말로 미국 현물시장은 쉬었지만, 시장은 중동 관련 발언 확대를 다시 해석해야 했습니다. 핵심은 말이 늘어난 것과 실제 집행 조치가 확인된 것은 다르다는 점입니다. 그래서 투자자들은 유가와 변동성, 금리 신호를 먼저 보며 월요일 초반 위험노출을 조절하는 모습입니다. 다만 공식 발표 문구가 새로 나오면 지금의 경계 흐름은 빠르게 바뀔 수 있습니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "주말 발언은 확대됐지만 새 공식 집행 확인은 제한적이었습니다."
+        },
+        {
+          "title": "핵심 해석",
+          "desc": "시장은 말보다 실행을 더 크게 반영해 방향 베팅을 줄였습니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "사건 확인 뒤 유가·변동성, 금리, 지수·섹터 순으로 해석이 진행됐습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,108.40 (-0.41%), Nasdaq 24,438.50 (-0.89%), Dow 49,310.32 (-0.36%), UST10Y 4.30%, VIX 18.92입니다."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "공식 발표 우선",
+          "desc": "SNS/인터뷰 발언과 정부·당국의 공식 집행 조치를 나눠 확인하세요."
+        },
+        {
+          "title": "환율·금리 동행",
+          "desc": "원/달러와 미 금리가 함께 오르면 한국 성장주 변동성이 커질 수 있습니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "확인 후 진입",
+          "desc": "시초가 추격보다 개장 초 1시간 수급 확인 후 분할 대응이 유리합니다."
+        },
+        {
+          "title": "업종 분리",
+          "desc": "기술/반도체와 에너지/방어주를 나눠 비중을 조절하세요."
+        }
+      ]
+    },
+    "title_en": "Weekend headline digestion: confirmation still beats prediction",
+    "highlights_en": [
+      "With US markets closed for the weekend, Friday close remains the benchmark (S&P500 -0.41%, Nasdaq -0.89%, Dow -0.36%)",
+      "Middle East commentary broadened over the weekend, but fresh formal enforcement confirmation stayed limited",
+      "Today's key map remains event check -> oil/volatility -> yields -> index/sector repricing"
+    ],
+    "tags_en": [
+      "US Equities",
+      "Global Issues",
+      "Rates",
+      "Volatility"
+    ],
+    "file_en": "./posts/2026-04-27.en.md",
+    "overnightLead_en": "US cash equities were closed over the weekend, but markets still had to reprice broader Middle East commentary. The key distinction remains commentary versus confirmed executable action. That is why investors are likely to manage Monday risk through oil, volatility, and yield signals first. If official wording changes, this caution setup can still flip quickly.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "Commentary broadened over the weekend, but fresh formal execution signals stayed limited."
+        },
+        {
+          "title": "Core read",
+          "desc": "Markets kept weighting executable policy over headline tone."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Interpretation moved from event check to oil/volatility, then yields, then index/sector pricing."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,108.40 (-0.41%), Nasdaq 24,438.50 (-0.89%), Dow 49,310.32 (-0.36%), UST10Y 4.30%, VIX 18.92."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Official wording first",
+          "desc": "Separate social/media statements from formal enforcement actions."
+        },
+        {
+          "title": "FX-rates combination",
+          "desc": "If USD/KRW and US yields rise together, Korea growth volatility can expand."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Confirm before chase",
+          "desc": "Prefer first-hour flow confirmation over opening-gap chasing."
+        },
+        {
+          "title": "Sector split",
+          "desc": "Size tech/semis separately from energy/defensive groups."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-04-26",
     "title": "주말 휴장 구간, 공식 조치 확인 전까지 확인매매 우위",
     "highlights": [
