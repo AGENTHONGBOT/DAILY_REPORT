@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-04-29",
+    "title": "FOMC 대기 속 박스권, 금리·달러가 상단을 제한한 밤",
+    "highlights": [
+      "미국장은 FOMC와 대형 실적 대기를 반영하며 좁은 범위에서 마감했습니다(추정).",
+      "중동/해상 리스크 발언은 이어졌지만 공식 집행 확대 확인은 제한적이었습니다(추정).",
+      "오늘 한국장은 미10년물과 원/달러 동행 여부가 핵심 변수입니다."
+    ],
+    "tags": [
+      "미국증시",
+      "FOMC",
+      "금리",
+      "달러"
+    ],
+    "file": "./posts/2026-04-29.md",
+    "indices": {
+      "sp": {
+        "level": "7,186.44",
+        "chg": "+0.17%"
+      },
+      "nasdaq": {
+        "level": "24,931.92",
+        "chg": "+0.18%"
+      },
+      "dow": {
+        "level": "49,102.36",
+        "chg": "-0.13%"
+      }
+    },
+    "overnightLead": "간밤 핵심은 뉴스보다 가격 반응이 차분했다는 점입니다. 중동 관련 발언은 이어졌지만 공식 집행 확대가 뚜렷하지 않아 시장은 전면 회피보다 업종 선택으로 대응했습니다. 그래서 지수는 큰 방향 없이 좁게 움직였고, 금리와 달러가 위험자산의 상단을 눌렀습니다. 다만 공식 발표 수위가 갑자기 높아지면 유가와 변동성이 먼저 튈 리스크는 여전히 남아 있습니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "FOMC·실적 대기와 지정학 발언 재순환이 동시에 작동했습니다."
+        },
+        {
+          "title": "핵심 해석",
+          "desc": "발언 대비 공식 집행 확인이 제한돼 지수 추세보다 업종 선택 장세가 강화됐습니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "지정학 헤드라인이 유가·변동성을 흔들고, 이후 금리·섹터로 전이됐습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,186.44(+0.17%), Nasdaq 24,931.92(+0.18%), Dow 49,102.36(-0.13%), UST10Y 4.36%, VIX 18.35 (추정)."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "공식 조치 확인",
+          "desc": "SNS/인터뷰 발언과 실제 제재·봉쇄 같은 공식 집행을 분리해 확인하세요."
+        },
+        {
+          "title": "금리·환율 동행",
+          "desc": "미10년 상향과 원/달러 상승이 겹치면 한국 성장주 변동성이 커질 수 있습니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "주 시나리오",
+          "desc": "금리 상단 부담이 이어지는 박스권에서 금융·에너지 상대강세 가능성이 높습니다."
+        },
+        {
+          "title": "실행 힌트",
+          "desc": "3회 분할, 회당 평시의 70% 비중. 미10년 4.42% 상향 고정 + 원/달러 급등 시 성장주 비중 축소."
+        }
+      ]
+    },
+    "title_en": "Range-bound ahead of FOMC as rates and dollar cap upside",
+    "highlights_en": [
+      "US equities closed in a narrow range ahead of FOMC and mega-cap earnings (estimate).",
+      "Geopolitical shipping commentary continued, but broader formal enforcement expansion remained limited (estimate).",
+      "For Korea today, UST10Y plus USD/KRW direction is the key risk input."
+    ],
+    "tags_en": [
+      "US Equities",
+      "FOMC",
+      "Rates",
+      "Dollar"
+    ],
+    "file_en": "./posts/2026-04-29.en.md",
+    "overnightLead_en": "The key overnight message was calm pricing despite noisy headlines. Geopolitical commentary continued, but with limited confirmation of broader formal execution, markets preferred sector rotation over broad de-risking. That left indices in a narrow range while rates and the dollar capped upside in risk assets. A sudden shift in official wording can still reprice oil and volatility first.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "FOMC/earnings positioning met renewed geopolitical headline flow."
+        },
+        {
+          "title": "Core read",
+          "desc": "With limited formal execution confirmation, sector rotation mattered more than index trend."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Geopolitical headlines moved oil/volatility first, then rates and sector pricing."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,186.44 (+0.17%), Nasdaq 24,931.92 (+0.18%), Dow 49,102.36 (-0.13%), UST10Y 4.36%, VIX 18.35 (estimate)."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Official action first",
+          "desc": "Separate social commentary from executable sanctions/shipping actions."
+        },
+        {
+          "title": "Rates-FX combination",
+          "desc": "If UST10Y and USD/KRW rise together, Korea growth volatility can expand quickly."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Base scenario",
+          "desc": "Rate-ceiling pressure keeps risk appetite boxed, favoring financials/energy on a relative basis."
+        },
+        {
+          "title": "Execution hint",
+          "desc": "Use 3 tranches at ~70% size; if UST10Y >4.42% with USD/KRW upside, reduce growth risk."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-04-28",
     "title": "금리 상단 경계 속 업종 장세, 금융 강세·반도체 숨고르기",
     "highlights": [
