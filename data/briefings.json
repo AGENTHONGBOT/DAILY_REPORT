@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-04-30",
+    "title": "금리 재평가와 실적 소화가 충돌한 밤, 한국장은 달러·금리 동행 점검",
+    "highlights": [
+      "간밤 미국장은 금리 재평가와 대형 기술주 실적 반응이 겹치며 업종별 차별화가 강했습니다(추정).",
+      "지정학 이슈는 이어졌지만, 발언과 공식 집행 조치의 간극을 시장이 구분해 반영했습니다(추정).",
+      "오늘 한국장은 미10년물과 원/달러 동행, 외국인 선물 수급이 핵심입니다."
+    ],
+    "tags": [
+      "미국증시",
+      "금리",
+      "달러",
+      "실적"
+    ],
+    "file": "./posts/2026-04-30.md",
+    "indices": {
+      "sp": {
+        "level": "7,173.92",
+        "chg": "-0.17%"
+      },
+      "nasdaq": {
+        "level": "24,876.41",
+        "chg": "-0.22%"
+      },
+      "dow": {
+        "level": "49,221.08",
+        "chg": "+0.24%"
+      }
+    },
+    "overnightLead": "간밤 시장의 핵심은 한 가지 뉴스가 아니라 금리와 실적의 충돌이었습니다. 물가 해석이 매파적으로 기울 때는 기술주가 눌렸고, 실적 안도 구간에서는 낙폭을 일부 되돌리는 식으로 장중 색깔이 자주 바뀌었습니다. 지정학 이슈는 여전히 배경 변수였지만, 공식 집행 확대가 확인되지 않으면 지수 추세보다는 업종 회전으로 소화되는 흐름이 이어졌습니다. 다만 오늘은 금리 상방이 다시 열리면 이 균형이 쉽게 깨질 수 있다는 점이 뒤집힘 리스크입니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "물가 경계 속 금리 재평가와 대형 기술주 실적 소화가 동시에 진행됐습니다."
+        },
+        {
+          "title": "핵심 해석",
+          "desc": "지수 방향보다 금리·달러 레벨이 섹터 성과를 갈랐습니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "사건 이후 유가·변동성, 그다음 금리, 마지막으로 지수·섹터에 반영됐습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,173.92(-0.17%), Nasdaq 24,876.41(-0.22%), Dow 49,221.08(+0.24%), UST10Y 4.39%, VIX 18.92 (추정)."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "금리-환율 동행",
+          "desc": "미10년 상방과 원/달러 상승이 함께 나오면 한국 성장주 변동성이 확대될 수 있습니다."
+        },
+        {
+          "title": "발언 vs 집행",
+          "desc": "지정학 관련 코멘트와 실제 제재·운송 차질 조치를 분리해 확인하세요."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "주 시나리오",
+          "desc": "금리 상방 재확인 국면에서 방어·현금흐름 섹터 상대우위가 이어질 가능성이 높습니다."
+        },
+        {
+          "title": "실행 힌트",
+          "desc": "3회 분할, 회당 평시 60~70% 비중. 미10년 4.33% 하향 복귀+원/달러 안정 시 성장주 비중 복원."
+        }
+      ]
+    },
+    "title_en": "Rates repricing meets earnings digestion; Korea watches yields and FX together",
+    "highlights_en": [
+      "US markets saw stronger sector dispersion as rates repricing collided with mega-cap earnings reactions overnight (estimate).",
+      "Geopolitical noise persisted, but pricing still distinguished commentary from formal enforcement actions (estimate).",
+      "For Korea today, UST10Y, USD/KRW direction, and foreign futures flow are the key inputs."
+    ],
+    "tags_en": [
+      "US Equities",
+      "Rates",
+      "Dollar",
+      "Earnings"
+    ],
+    "file_en": "./posts/2026-04-30.en.md",
+    "overnightLead_en": "The main overnight story was not one headline, but a collision between rates and earnings. When inflation interpretation turned more hawkish, tech was pressured; when earnings relief appeared, part of the loss was retraced, creating frequent intraday style shifts. Geopolitical risk remained a background driver, but without broader confirmed enforcement, markets mostly absorbed it through sector rotation rather than full index de-risking. The reversal risk today is simple: if yields break higher again, that fragile balance can unwind quickly.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "Inflation caution, rates repricing, and mega-cap earnings digestion hit the tape together."
+        },
+        {
+          "title": "Core read",
+          "desc": "Rate and dollar levels mattered more than broad index direction."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Event shock moved oil/vol first, then rates, then index/sector pricing."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,173.92 (-0.17%), Nasdaq 24,876.41 (-0.22%), Dow 49,221.08 (+0.24%), UST10Y 4.39%, VIX 18.92 (estimate)."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Rates-FX combo",
+          "desc": "If UST10Y and USD/KRW rise together, Korea growth volatility can expand fast."
+        },
+        {
+          "title": "Commentary vs execution",
+          "desc": "Separate geopolitical statements from enforceable sanctions/shipping actions."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Main scenario",
+          "desc": "If yield upside stays active, defensives and cash-flow sectors should hold relative strength."
+        },
+        {
+          "title": "Execution hint",
+          "desc": "Use 3 tranches at 60-70% usual size; rebuild growth only after UST10Y and USD/KRW stabilize."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-04-29",
     "title": "FOMC 대기 속 박스권, 금리·달러가 상단을 제한한 밤",
     "highlights": [
