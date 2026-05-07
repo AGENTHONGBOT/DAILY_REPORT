@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-05-07",
+    "title": "협상 기대와 AI 실적 모멘텀이 겹친 밤, 한국장은 환율·선물 수급 확인",
+    "highlights": [
+      "간밤 미국장은 지정학 완화 기대와 AI 반도체 실적 모멘텀이 겹치며 강한 위험선호를 보였습니다.",
+      "미 10년물 하락(4.3560%)과 낮은 VIX(17.39)가 성장주 멀티플 부담을 완화했습니다.",
+      "오늘 한국장은 원/달러와 외국인 선물 방향이 미국발 반등의 지속 여부를 가를 가능성이 큽니다."
+    ],
+    "tags": [
+      "미국증시",
+      "AI반도체",
+      "금리",
+      "환율"
+    ],
+    "file": "./posts/2026-05-07.md",
+    "indices": {
+      "sp": {
+        "level": "7,365.12",
+        "chg": "+1.46%"
+      },
+      "nasdaq": {
+        "level": "25,838.94",
+        "chg": "+2.02%"
+      },
+      "dow": {
+        "level": "49,910.59",
+        "chg": "+1.24%"
+      }
+    },
+    "overnightLead": "간밤 핵심은 지정학 완화 기대와 AI 실적 모멘텀이 동시에 강해졌다는 점입니다. 시장은 발언 자체보다 금리 하락과 지수 급등이라는 실제 가격 신호를 먼저 반영했습니다. 특히 나스닥 상대강도가 커지며 성장주로 자금이 다시 빠르게 붙었습니다. 다만 공식 집행 조치가 예상과 다르게 나오면 유가와 변동성이 먼저 반전할 수 있다는 리스크는 남아 있습니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "지정학 완화 기대와 AI 반도체 실적 서프라이즈가 같은 방향으로 작동했습니다."
+        },
+        {
+          "title": "핵심 해석",
+          "desc": "발언보다 금리 하락·지수 반응 같은 가격 신호가 위험선호를 강화했습니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "사건 기대가 변동성 완화와 금리 하락으로 이어진 뒤, 지수와 반도체 섹터가 크게 반응했습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,365.12(+1.46%), Nasdaq 25,838.94(+2.02%), Dow 49,910.59(+1.24%), UST10Y 4.3560%, VIX 17.39."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "환율·금리 동시 확인",
+          "desc": "원/달러 안정과 미10년물 4.35%대 유지가 한국 성장주 수급의 핵심입니다."
+        },
+        {
+          "title": "공식 조치 확인",
+          "desc": "지정학 관련 발언과 실제 집행 조치를 분리해 확인해야 합니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "주 시나리오",
+          "desc": "금리 안정과 AI 실적 모멘텀 지속 시 반도체·성장주 상대강세가 이어질 가능성이 높습니다."
+        },
+        {
+          "title": "실행 힌트",
+          "desc": "3회 분할(40/30/30), 첫 진입은 평시 70% 크기. 미10년 4.40% 재돌파 또는 원/달러 급등 시 비중 20~30% 축소."
+        }
+      ]
+    },
+    "title_en": "De-escalation hopes and AI earnings momentum align; Korea watches FX and futures flow",
+    "highlights_en": [
+      "US equities rallied as easing geopolitical expectations and AI-chip earnings momentum arrived together.",
+      "A lower UST10Y (4.3560%) and contained VIX (17.39) eased valuation pressure on growth assets.",
+      "For Korea today, USD/KRW direction and foreign futures flow are the key continuation signals."
+    ],
+    "tags_en": [
+      "US Equities",
+      "AI Semiconductors",
+      "Rates",
+      "FX"
+    ],
+    "file_en": "./posts/2026-05-07.en.md",
+    "overnightLead_en": "Overnight, two drivers aligned: de-escalation expectations and stronger AI-linked earnings momentum. Markets responded more to price confirmation than commentary, with lower yields and broad index upside. Nasdaq leadership signaled renewed demand for growth duration. The reversal risk remains that any unexpected formal geopolitical execution step could reprice oil and volatility first.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "Geopolitical easing hopes and AI semiconductor earnings surprise worked in the same direction."
+        },
+        {
+          "title": "Core read",
+          "desc": "Price confirmation via lower yields and stronger indices mattered more than headline tone."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Event expectations eased volatility and yields first, then lifted indices and semiconductors."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,365.12 (+1.46%), Nasdaq 25,838.94 (+2.02%), Dow 49,910.59 (+1.24%), UST10Y 4.3560%, VIX 17.39."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Rates-FX combo",
+          "desc": "Korea growth follow-through depends on stable USD/KRW and UST10Y holding near 4.35%."
+        },
+        {
+          "title": "Commentary vs execution",
+          "desc": "Separate statements from formal executable geopolitical actions."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Main scenario",
+          "desc": "If yields stay contained and AI momentum holds, semis and growth should keep relative strength."
+        },
+        {
+          "title": "Execution hint",
+          "desc": "Use 3 tranches (40/30/30) with ~70% initial size; if UST10Y >4.40% or USD/KRW spikes, reduce risk by 20-30%."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-04-30",
     "title": "금리 재평가와 실적 소화가 충돌한 밤, 한국장은 달러·금리 동행 점검",
     "highlights": [
