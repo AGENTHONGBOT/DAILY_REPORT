@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-05-08",
+    "title": "금리와 유가가 동시에 오른 밤, 한국장은 4.40% 금리선과 환율 확인",
+    "highlights": [
+      "간밤 미국 증시는 약세 마감했지만 VIX 하락으로 패닉성 매도는 제한됐습니다.",
+      "미 10년물 4.392%와 WTI 97.24달러 반등이 동시에 나타나 할인율 부담이 다시 커졌습니다.",
+      "오늘 한국장은 미10년 4.40%선과 원/달러·외국인 선물 흐름이 핵심 체크포인트입니다."
+    ],
+    "tags": [
+      "미국증시",
+      "금리",
+      "유가",
+      "환율"
+    ],
+    "file": "./posts/2026-05-08.md",
+    "indices": {
+      "sp": {
+        "level": "7,337.11",
+        "chg": "-0.38%"
+      },
+      "nasdaq": {
+        "level": "25,806.20",
+        "chg": "-0.13%"
+      },
+      "dow": {
+        "level": "49,596.97",
+        "chg": "-0.63%"
+      }
+    },
+    "overnightLead": "가장 중요한 변화는 미 장기금리와 유가가 동시에 위로 움직였다는 점입니다. 시장은 이 조합을 물가 부담과 할인율 부담의 결합으로 해석해 지수 상단을 낮췄습니다. 다만 VIX가 하락해 전면 리스크오프보다는 선택적 조정 성격이 강했습니다. 뒤집힐 리스크는 유가의 추가 급등이나 미10년 4.45% 상향 고정입니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "미10년 상승과 유가 반등이 동시에 나타나 위험자산 할인율 부담이 커졌습니다."
+        },
+        {
+          "title": "핵심 해석",
+          "desc": "공포 확산보다 가격 재계산 성격이 강해 업종별 차별화가 이어졌습니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "유가 반등이 물가 경계로 이어지고, 금리 상방이 지수와 성장주 상단을 눌렀습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,337.11(-0.38%), Nasdaq 25,806.20(-0.13%), Dow 49,596.97(-0.63%), UST10Y 4.392%, VIX 17.08."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "금리-환율 동행",
+          "desc": "미10년 4.40% 안착과 원/달러 상승이 겹치면 한국 성장주 변동성이 커질 수 있습니다."
+        },
+        {
+          "title": "유가 추세",
+          "desc": "WTI가 98~100달러로 확장하면 비용·물가 우려가 다시 강화됩니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "주 시나리오",
+          "desc": "금리 상방과 유가 반등 조합이 유지되면 방어·현금흐름 업종 상대강세 가능성이 높습니다."
+        },
+        {
+          "title": "실행 힌트",
+          "desc": "3회 분할(40/30/30), 첫 진입 70% 크기. 미10년 4.45% 상향 고정 시 총 위험비중 20% 축소."
+        }
+      ]
+    },
+    "title_en": "Yields and oil rose together overnight; Korea watches 4.40% and FX flow",
+    "highlights_en": [
+      "US equities closed lower, but a lower VIX suggested no panic liquidation.",
+      "UST10Y at 4.392% and WTI at 97.24 moved higher together, rebuilding valuation pressure.",
+      "For Korea today, UST10Y around 4.40% and USD/KRW plus foreign futures flow are the key checks."
+    ],
+    "tags_en": [
+      "US Equities",
+      "Rates",
+      "Oil",
+      "FX"
+    ],
+    "file_en": "./posts/2026-05-08.en.md",
+    "overnightLead_en": "The key overnight shift was the joint upside move in long-end yields and oil. Markets read that as a combined inflation and discount-rate headwind, capping upside in risk assets. With VIX still lower, this looked more like selective repricing than full de-risking. The flip risk is a further oil spike or UST10Y holding above 4.45%.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "Higher UST10Y and higher oil arrived together, tightening valuation conditions."
+        },
+        {
+          "title": "Core read",
+          "desc": "This was selective repricing rather than broad panic unwinds."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Oil rebound revived inflation concern, then higher yields capped index and growth upside."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,337.11 (-0.38%), Nasdaq 25,806.20 (-0.13%), Dow 49,596.97 (-0.63%), UST10Y 4.392%, VIX 17.08."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Rates-FX combo",
+          "desc": "If UST10Y holds above 4.40% with higher USD/KRW, Korea growth volatility can expand."
+        },
+        {
+          "title": "Oil persistence",
+          "desc": "A push toward 98-100 WTI can quickly re-tighten inflation expectations."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Main scenario",
+          "desc": "If yields and oil stay firm, defensive cash-flow sectors should outperform expensive growth."
+        },
+        {
+          "title": "Execution hint",
+          "desc": "Use 3 tranches (40/30/30), first size ~70%; cut total risk ~20% if UST10Y stays above 4.45%."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-05-07",
     "title": "협상 기대와 AI 실적 모멘텀이 겹친 밤, 한국장은 환율·선물 수급 확인",
     "highlights": [
