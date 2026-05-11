@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-05-12",
+    "title": "금리 완화형 반등, 오늘은 미10년·원달러·외국인 선물 확인",
+    "highlights": [
+      "장기금리 하락과 기술주 강세가 겹치며 미국 3대 지수가 상승 마감했습니다(추정).",
+      "지정학 이슈는 있었지만 공식 집행 조치 확대 확인이 제한돼 유가 급등 고착은 제한됐습니다(추정).",
+      "오늘 한국장은 미10년물, 원/달러, 외국인 선물 동행 여부가 핵심입니다."
+    ],
+    "tags": [
+      "미국증시",
+      "금리",
+      "환율",
+      "반도체"
+    ],
+    "file": "./posts/2026-05-12.md",
+    "indices": {
+      "sp": {
+        "level": "7,468.32",
+        "chg": "+0.94%"
+      },
+      "nasdaq": {
+        "level": "26,631.20",
+        "chg": "+1.46%"
+      },
+      "dow": {
+        "level": "49,842.11",
+        "chg": "+0.47%"
+      }
+    },
+    "overnightLead": "간밤 핵심은 장기금리 하락과 기술주 재강세가 동시에 나온 점입니다(추정). 시장은 지정학 발언보다 공식 집행 조치 여부를 먼저 확인하며 유가 급등을 제한적으로 해석했습니다(추정). 그 결과 변동성은 낮아지고 나스닥 상대강도가 강화됐습니다. 뒤집힐 리스크는 미10년물 재상승과 유가 95달러 상향 고정입니다(추정).",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "장기금리 완화와 기술주 강세가 같은 방향으로 작동했습니다(추정)."
+        },
+        {
+          "title": "핵심 해석",
+          "desc": "발언보다 공식 집행 조치 확인이 가격 반응을 좌우했습니다(추정)."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "지정학 헤드라인 이후 유가·변동성, 금리, 지수·섹터 순으로 반응했습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,468.32(+0.94%), Nasdaq 26,631.20(+1.46%), Dow 49,842.11(+0.47%), UST10Y 4.35% 내외(추정), VIX 16.78 내외(추정)."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "금리-환율 조합",
+          "desc": "미10년물 반등과 원/달러 상승이 겹치면 한국 성장주 변동성이 커질 수 있습니다."
+        },
+        {
+          "title": "공식 조치 확인",
+          "desc": "지정학 관련 발언과 실제 제재·봉쇄 같은 공식 집행 조치를 분리해 확인해야 합니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "주 시나리오",
+          "desc": "금리 하락 흐름이 유지되면 반도체·성장주 상대강세가 하루 더 이어질 가능성이 높습니다."
+        },
+        {
+          "title": "실행 힌트",
+          "desc": "3회 분할(40/30/30), 첫 진입 70% 이내. 미10년 4.40% 상향 고정 또는 원/달러 급등 시 총 위험비중 20% 축소."
+        }
+      ]
+    },
+    "title_en": "Rate-relief rebound led by tech; Korea watches UST10Y and USD/KRW",
+    "highlights_en": [
+      "US majors rose as long-end yields eased and tech leadership returned (estimate).",
+      "Geopolitical headlines persisted, but limited confirmation of formal execution expansion capped oil breakout risk (estimate).",
+      "For Korea today, UST10Y, USD/KRW, and foreign futures flow are the key checks."
+    ],
+    "tags_en": [
+      "US Equities",
+      "Rates",
+      "FX",
+      "Semiconductors"
+    ],
+    "file_en": "./posts/2026-05-12.en.md",
+    "overnightLead_en": "The key overnight shift was a rate-relief rebound led by large-cap tech (estimate). Markets weighted formal executable actions over commentary in geopolitics, limiting aggressive oil repricing (estimate). That helped volatility ease while Nasdaq leadership strengthened. The flip risk is a re-rise in UST10Y with oil holding above 95 (estimate).",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "Easing long-end yields and tech leadership aligned in the same direction (estimate)."
+        },
+        {
+          "title": "Core read",
+          "desc": "Pricing responded more to formal execution signals than commentary tone (estimate)."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Headline risk moved oil/vol first, then yields, then index/sector pricing."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,468.32 (+0.94%), Nasdaq 26,631.20 (+1.46%), Dow 49,842.11 (+0.47%), UST10Y around 4.35% (estimate), VIX around 16.78 (estimate)."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Rates-FX combo",
+          "desc": "If UST10Y rises with USD/KRW upside, Korea growth volatility can expand quickly."
+        },
+        {
+          "title": "Commentary vs execution",
+          "desc": "Separate geopolitical statements from formal executable actions."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Main scenario",
+          "desc": "If rate relief holds, semis and growth should keep relative strength for another session."
+        },
+        {
+          "title": "Execution hint",
+          "desc": "Use 3 tranches (40/30/30), first size about 70%; cut total risk ~20% if UST10Y >4.40% or USD/KRW spikes."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-05-09",
     "title": "주말 앞 반등, 오늘은 금리 상단과 원/달러가 추세를 가른다",
     "highlights": [
