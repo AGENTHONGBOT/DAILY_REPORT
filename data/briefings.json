@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-05-13",
+    "title": "유가 100달러·미10년 4.46% 재상승, 한국장은 환율·선물 수급이 핵심",
+    "highlights": [
+      "나스닥과 반도체가 약세, 다우는 강보합으로 업종 온도차가 확대됐습니다.",
+      "WTI 101.85달러와 미10년 4.463% 동반 상승으로 성장주 할인율 부담이 커졌습니다.",
+      "오늘 한국장은 원/달러, 외국인 선물, 미10년 4.46% 유지 여부를 먼저 확인해야 합니다."
+    ],
+    "tags": [
+      "미국증시",
+      "유가",
+      "금리",
+      "환율"
+    ],
+    "file": "./posts/2026-05-13.md",
+    "indices": {
+      "sp": {
+        "level": "7,400.96",
+        "chg": "-0.16%"
+      },
+      "nasdaq": {
+        "level": "26,088.20",
+        "chg": "-0.71%"
+      },
+      "dow": {
+        "level": "49,760.56",
+        "chg": "+0.11%"
+      }
+    },
+    "overnightLead": "간밤 핵심은 유가 급등과 장기금리 재상승이 동시에 나온 점입니다. 시장은 이 조합을 물가 부담과 할인율 부담의 결합으로 해석하며 기술주 비중을 줄였습니다. 그래서 지수는 제한 하락이었지만 내부적으로는 반도체·성장주 약세와 방어주 강세가 뚜렷했습니다. 뒤집힐 리스크는 유가 진정과 미10년 4.40% 하향 복귀입니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "WTI 100달러 상회와 미10년 4.46%대 재상승이 동시에 확인됐습니다."
+        },
+        {
+          "title": "핵심 해석",
+          "desc": "유가 상승이 물가 경계를 자극했고, 금리 상방이 성장주 밸류에이션을 눌렀습니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "유가·기대인플레 상승 → 장기금리 상방 → 기술·반도체 조정으로 이어졌습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,400.96(-0.16%), Nasdaq 26,088.20(-0.71%), Dow 49,760.56(+0.11%), UST10Y 4.463%, VIX 17.99."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "금리-환율 조합",
+          "desc": "미10년 4.46%대 유지와 원/달러 상승이 겹치면 한국 성장주 변동성이 커질 수 있습니다."
+        },
+        {
+          "title": "공식 조치 확인",
+          "desc": "지정학·에너지 관련 발언과 공식 집행 조치를 분리해 체크해야 합니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "주 시나리오",
+          "desc": "유가+금리 상방이 하루 더 유지되며 방어·금융 상대강세가 이어질 가능성이 높습니다."
+        },
+        {
+          "title": "실행 힌트",
+          "desc": "3회 분할(40/30/30), 첫 진입 60~70%. 미10년 4.40% 하향+원/달러 안정 시 성장 비중 10~15% 복원, 유가 추가 급등 시 총 위험비중 20% 축소."
+        }
+      ]
+    },
+    "title_en": "Oil above 100 and UST10Y at 4.46%: Korea watches FX and futures flow",
+    "highlights_en": [
+      "Nasdaq and semiconductors lagged while the Dow stayed slightly positive, showing clear sector divergence.",
+      "WTI at 101.85 and UST10Y at 4.463% raised combined inflation and discount-rate pressure on growth.",
+      "For Korea today, watch USD/KRW, foreign futures flow, and whether UST10Y holds near 4.46%."
+    ],
+    "tags_en": [
+      "US Equities",
+      "Oil",
+      "Rates",
+      "FX"
+    ],
+    "file_en": "./posts/2026-05-13.en.md",
+    "overnightLead_en": "The key overnight shift was the joint upside move in oil and long-end yields. Markets read this as a combined inflation and valuation headwind, reducing exposure to long-duration growth. Index declines were moderate, but internal rotation was clear: semis and tech lagged while defensives and financials held better. The flip risk is oil cooling with UST10Y falling back below 4.40%.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "WTI above 100 and UST10Y back near 4.46% appeared together."
+        },
+        {
+          "title": "Core read",
+          "desc": "Higher oil lifted inflation concern, and higher yields pressured growth valuation."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Oil and inflation expectations rose first, then yields moved up, then tech/semi pricing weakened."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,400.96 (-0.16%), Nasdaq 26,088.20 (-0.71%), Dow 49,760.56 (+0.11%), UST10Y 4.463%, VIX 17.99."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Rates-FX combo",
+          "desc": "If UST10Y stays around 4.46% with higher USD/KRW, Korea growth volatility can expand."
+        },
+        {
+          "title": "Commentary vs execution",
+          "desc": "Separate geopolitical/energy comments from formal executable actions."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Main scenario",
+          "desc": "Oil-plus-yield pressure persists for another session, favoring defensives and financials over expensive growth."
+        },
+        {
+          "title": "Execution hint",
+          "desc": "Use 3 tranches (40/30/30), first size 60-70%; rebuild growth only if UST10Y <4.40% with steadier KRW, cut total risk ~20% if oil extends higher."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-05-12",
     "title": "금리 완화형 반등, 오늘은 미10년·원달러·외국인 선물 확인",
     "highlights": [
