@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-05-16",
+    "title": "금리 안정 신호 속 기술주 우위, 한국장은 미10년·원달러 동행 점검",
+    "highlights": [
+      "간밤 미국장은 금리 부담 완화와 기술주 상대강세가 함께 나타났습니다(추정).",
+      "지정학 이슈는 이어졌지만 발언 대비 공식 집행 확대는 제한적이라는 해석이 우세했습니다(추정).",
+      "오늘 한국장은 미10년물, 원/달러, 외국인 선물 방향이 같은 쪽으로 움직이는지 확인이 핵심입니다."
+    ],
+    "tags": [
+      "미국증시",
+      "금리",
+      "환율",
+      "지정학"
+    ],
+    "file": "./posts/2026-05-16.md",
+    "indices": {
+      "sp": {
+        "level": "7,421.86",
+        "chg": "+0.67%"
+      },
+      "nasdaq": {
+        "level": "26,203.74",
+        "chg": "+0.95%"
+      },
+      "dow": {
+        "level": "49,889.55",
+        "chg": "+0.38%"
+      }
+    },
+    "overnightLead": "간밤 시장은 금리 부담이 다소 누그러진 가운데 기술주로 수급이 다시 붙는 흐름이었습니다. 지정학 관련 강한 발언은 이어졌지만, 공식 집행 확대가 제한적이라는 해석이 우세해 전면 회피보다는 업종 순환으로 소화됐습니다. 그래서 지수는 상승했지만 업종 온도차는 여전히 남았습니다. 뒤집힐 리스크는 미10년물 재상승과 원/달러 동반 급등입니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "금리 안정 시도와 기술주 상대강세가 동시에 나타났습니다(추정)."
+        },
+        {
+          "title": "핵심 해석",
+          "desc": "지정학 발언 대비 공식 집행 확대가 제한돼 전면 리스크오프는 피했습니다(추정)."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "사건 이후 유가·변동성, 금리, 지수·섹터 순으로 가격이 반응했습니다."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,421.86(+0.67%), Nasdaq 26,203.74(+0.95%), Dow 49,889.55(+0.38%), UST10Y 4.40% 내외(추정), VIX 17.86 내외(추정)."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "금리-환율 동행",
+          "desc": "미10년물 안정과 원/달러 진정이 함께 나오면 한국 성장주 체감이 개선될 수 있습니다."
+        },
+        {
+          "title": "발언 vs 공식 조치",
+          "desc": "SNS/인터뷰 발언과 실제 제재·봉쇄·집행 조치를 반드시 분리해 확인해야 합니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "주 시나리오",
+          "desc": "금리 안정이 이어지며 한국 기술·반도체 상대강세가 하루 더 이어질 가능성이 높습니다."
+        },
+        {
+          "title": "실행 힌트",
+          "desc": "3회 분할(40/30/30), 1차 60~70%. 미10년 4.45% 상향 고정 또는 원/달러 급등 시 총 위험비중 20% 축소."
+        }
+      ]
+    },
+    "title_en": "Tech leadership on rate stabilization signals; Korea should track UST10Y and USD/KRW together",
+    "highlights_en": [
+      "Overnight US markets showed relative tech strength as rate pressure eased (estimate).",
+      "Geopolitical commentary stayed active, but broader formal execution expansion still looked limited (estimate).",
+      "For Korea today, the key check is whether UST10Y, USD/KRW, and foreign futures flow move in the same direction."
+    ],
+    "tags_en": [
+      "US Equities",
+      "Rates",
+      "FX",
+      "Geopolitics"
+    ],
+    "file_en": "./posts/2026-05-16.en.md",
+    "overnightLead_en": "Overnight markets leaned risk-on as rate pressure softened and tech leadership held. Geopolitical rhetoric remained loud, but with limited signs of broader formal execution expansion, markets favored rotation over full de-risking. That kept index tone constructive while sector dispersion stayed visible. The main reversal risk is a joint re-acceleration in UST10Y and USD/KRW.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "Rate stabilization signals and tech relative strength appeared together (estimate)."
+        },
+        {
+          "title": "Core read",
+          "desc": "Commentary stayed noisy, but limited formal execution expansion reduced broad risk-off pressure (estimate)."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Headlines moved oil/vol first, then yields, then index and sector pricing."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P500 7,421.86 (+0.67%), Nasdaq 26,203.74 (+0.95%), Dow 49,889.55 (+0.38%), UST10Y around 4.40% (estimate), VIX around 17.86 (estimate)."
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Rates-FX combination",
+          "desc": "If lower UST10Y aligns with steadier USD/KRW, Korea growth flow can extend."
+        },
+        {
+          "title": "Commentary vs execution",
+          "desc": "Separate geopolitical commentary from formal executable sanctions/blockade actions."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Main scenario",
+          "desc": "Rate stabilization favors Korea semis and quality growth for another session."
+        },
+        {
+          "title": "Execution hint",
+          "desc": "Use 3 tranches (40/30/30), first size 60-70%; cut total risk ~20% if UST10Y >4.45% with USD/KRW spike."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-05-15",
     "title": "?? ??? ??, ?? ???? ?10????? ?? ??",
     "highlights": [
