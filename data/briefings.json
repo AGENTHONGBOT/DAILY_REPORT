@@ -1,61 +1,61 @@
 {
-  "date": "2026-05-23",
-  "title": "금리 완화 속 반도체 우위 가능성, 오늘은 원달러와 선물 수급 확인",
+  "date": "2026-05-24",
+  "title": "달러·선물 수급 안정 시 반도체 상대강세, 오늘은 환율 상단 재확인",
   "highlights": [
-    "미국 3대 지수는 동반 상승했고, 미10년물 하락이 성장주 부담을 낮췄습니다.",
-    "중동 이슈는 발언 중심으로 소화되며 VIX는 추가 하락했습니다.",
-    "한국장은 원/달러 안정과 외국인 선물 순매수 유지 여부가 핵심입니다."
+    "미국 증시는 금리와 VIX가 함께 내려가며 완만한 위험선호 흐름을 보였습니다.",
+    "지정학 이슈는 발언과 공식 집행 조치가 구분되며 즉시 충격 반영은 제한됐습니다(추정).",
+    "한국장은 원/달러와 외국인 선물 수급이 같은 방향으로 안정되는지 확인이 우선입니다."
   ],
   "tags": ["미국증시", "환율", "금리", "반도체"],
-  "file": "./posts/2026-05-23.md",
+  "file": "./posts/2026-05-24.md",
   "indices": {
-    "sp": { "level": "7,473.47", "chg": "+0.37%" },
-    "nasdaq": { "level": "26,343.97", "chg": "+0.19%" },
-    "dow": { "level": "50,579.70", "chg": "+0.58%" }
+    "sp": { "level": "7,488.42", "chg": "+0.20%" },
+    "nasdaq": { "level": "26,390.11", "chg": "+0.18%" },
+    "dow": { "level": "50,510.90", "chg": "-0.14%" }
   },
-  "overnightLead": "간밤 시장의 핵심은 금리 부담 완화였습니다. 미10년물이 내려오고 VIX가 더 낮아지면서 성장주 매도가 진정됐고, 지수는 완만한 상승으로 마감했습니다. 중동 이슈는 여전히 크지만, 시장은 발언과 공식 집행 조치를 분리해 해석하며 즉시 공급충격 가격 반영은 제한했습니다(추정). 다만 발언이 실제 제재·군사 집행으로 전환되면 유가와 달러가 함께 튈 리스크는 열려 있습니다.",
+  "overnightLead": "간밤의 중심 변수는 지정학 자체보다 금리와 환율의 동시 안정이었습니다. 미10년물과 VIX가 함께 내려가면서 주식의 하단이 지지됐고, 성장주 중심의 선별 매수가 이어졌습니다. 중동 관련 뉴스는 계속됐지만, 시장은 발언과 공식 집행 조치를 분리해 즉시 공급충격 가격 반영을 크게 늘리지는 않았습니다(추정). 다만 실제 제재·군사 집행으로 전환되면 유가와 달러가 동시에 튀며 오늘 시나리오가 빠르게 뒤집힐 수 있습니다.",
   "insightSections": {
     "topStory": [
-      { "title": "핵심 사건", "desc": "미10년물 하락과 VIX 하락이 동시에 나오며 성장주 부담이 완화됐습니다." },
-      { "title": "핵심 해석", "desc": "지정학 불확실성은 남아 있지만, 당장은 발언보다 실행 여부가 가격의 분기점입니다." }
+      { "title": "핵심 사건", "desc": "미10년물과 VIX가 동시에 하락하며 성장주 부담이 완화됐습니다." },
+      { "title": "핵심 변수", "desc": "지정학 뉴스의 양보다 공식 집행 여부가 가격 분기점으로 남아 있습니다." }
     ],
     "marketReaction": [
-      { "title": "반응 경로", "desc": "금리 완화 → 변동성 완화 → 기술·헬스케어 중심 선별 매수 순서로 반응했습니다." },
-      { "title": "숫자 스냅샷", "desc": "S&P500 7,473.47(+0.37%), Nasdaq 26,343.97(+0.19%), Dow 50,579.70(+0.58%), UST10Y 4.56%, VIX 16.70" }
+      { "title": "반응 경로", "desc": "사건 점검 → 금리·변동성 완화 → 성장주 선별 매수 흐름으로 이어졌습니다." },
+      { "title": "숫자 스냅샷", "desc": "S&P500 7,488.42(+0.20%), Nasdaq 26,390.11(+0.18%), Dow 50,510.90(-0.14%), UST10Y 4.53%, VIX 16.40" }
     ],
     "watchNow": [
-      { "title": "환율-수급", "desc": "원/달러 안정과 외국인 코스피200 선물 순매수 동시 유지가 중요합니다." },
-      { "title": "유가 민감도", "desc": "WTI가 97달러대 위로 더 오르면 국내 성장주 체감이 약해질 수 있습니다." }
+      { "title": "환율-수급 결합", "desc": "원/달러 안정과 외국인 코스피200 선물 순매수 유지가 동시에 나오는지 확인이 중요합니다." },
+      { "title": "유가 재가속", "desc": "WTI 상방 재가속 시 인플레이션 우려가 재점화돼 성장주 탄력이 약해질 수 있습니다." }
     ],
     "positioning": [
-      { "title": "주 시나리오", "desc": "미금리 하락 여파가 이어지며 한국 반도체·대형 성장주의 상대강세 가능성이 높습니다." },
-      { "title": "실행 힌트", "desc": "3회 분할(40/35/25), 1차는 평시 70% 규모. 원/달러 고점 갱신+외국인 선물 순매도 전환 시 위험비중 20% 축소." }
+      { "title": "주 시나리오", "desc": "달러와 선물 수급이 안정되는 한 한국 반도체·대형 성장주의 상대강세가 유력합니다." },
+      { "title": "실행 힌트", "desc": "3회 분할(40/35/25), 1차는 평시 70% 규모. 원/달러 고점 갱신+외국인 선물 순매도 전환 동시 발생 시 위험비중 20% 축소." }
     ]
   },
-  "title_en": "Lower yield pressure supports growth; watch USD/KRW and foreign futures",
+  "title_en": "Stable USD and futures flow favor Korean growth; recheck FX ceiling today",
   "highlights_en": [
-    "US majors closed higher with lower 10Y yield easing growth valuation pressure.",
-    "Middle East risk stayed headline-heavy, while VIX moved lower again.",
-    "For Korea, stable USD/KRW plus foreign futures net buy is the key intraday test."
+    "US equities showed mild risk-on as US 10Y and VIX both moved lower.",
+    "Geopolitical headlines stayed active, but markets still separated remarks from formal executable actions (estimate).",
+    "For Korea, the first test is whether USD/KRW stability and foreign futures net buy hold at the same time."
   ],
   "tags_en": ["US Equities", "FX", "Rates", "Semiconductors"],
-  "file_en": "./posts/2026-05-23.en.md",
-  "overnightLead_en": "The overnight lead was the easing in rate pressure. With US 10Y lower and VIX softer, equity downside was contained and selective growth buying continued. Geopolitical risk remained elevated, but markets still treated most updates as statements rather than immediate executable action, limiting direct supply-shock pricing (estimate). The key reversal risk is a shift from rhetoric to formal sanctions or military implementation that lifts oil and USD together.",
+  "file_en": "./posts/2026-05-24.en.md",
+  "overnightLead_en": "The overnight lead was less about headline volume and more about market transmission. With US 10Y and VIX both lower, downside stress in growth equities eased and selective buying persisted. Geopolitical updates remained active, but markets still treated most as statements rather than formal executable action, limiting immediate supply-shock pricing (estimate). The key reversal risk is a clear shift to sanctions or military implementation that pushes oil and USD higher together.",
   "insightSections_en": {
     "topStory": [
-      { "title": "Core event", "desc": "US 10Y and VIX both moved lower, reducing stress on growth multiples." },
-      { "title": "Core read", "desc": "Execution risk, not rhetoric alone, remains the trigger for a larger risk reset." }
+      { "title": "Core event", "desc": "US 10Y and VIX declined together, easing pressure on growth-heavy equity positioning." },
+      { "title": "Core variable", "desc": "Formal execution risk, not rhetoric alone, remains the main trigger for repricing." }
     ],
     "marketReaction": [
-      { "title": "Transmission path", "desc": "Softer rates led to softer vol, then selective buying in tech and healthcare." },
-      { "title": "Snapshot", "desc": "S&P 500 7,473.47 (+0.37%), Nasdaq 26,343.97 (+0.19%), Dow 50,579.70 (+0.58%), UST10Y 4.56%, VIX 16.70" }
+      { "title": "Transmission path", "desc": "Event check led to softer rates and vol, then selective growth buying." },
+      { "title": "Snapshot", "desc": "S&P 500 7,488.42 (+0.20%), Nasdaq 26,390.11 (+0.18%), Dow 50,510.90 (-0.14%), UST10Y 4.53%, VIX 16.40" }
     ],
     "watchNow": [
-      { "title": "FX-flow mix", "desc": "Watch if stable USD/KRW and foreign KOSPI200 futures net buy hold together." },
-      { "title": "Oil sensitivity", "desc": "Further WTI upside above $97 can tighten risk appetite for Korean growth stocks." }
+      { "title": "FX-flow mix", "desc": "Track whether stable USD/KRW and foreign KOSPI200 futures net buy continue together." },
+      { "title": "Oil re-acceleration", "desc": "If WTI accelerates higher again, inflation concern can weaken growth momentum." }
     ],
     "positioning": [
-      { "title": "Main scenario", "desc": "Korean semis and large-cap growth keep relative strength as lower US-yield impulse carries over." },
+      { "title": "Main scenario", "desc": "Korean semis and large-cap growth keep relative strength as long as USD and futures flow stay stable." },
       { "title": "Execution hint", "desc": "Use 3 tranches (40/35/25), first clip at 70% normal size; cut risk 20% on USD/KRW breakout plus foreign futures net sell flip." }
     ]
   }
