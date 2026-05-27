@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-05-28",
+    "title": "금리·달러 안정 시도 속 차별화 장세, 오늘은 금리-환율 동행 신호가 핵심",
+    "highlights": [
+      "간밤 시장은 지정학 발언보다 유가·금리로의 실제 확산 여부를 더 크게 반영했습니다(추정).",
+      "대형 기술주는 상대적으로 버텼고, 경기민감주는 원자재·달러 변화에 더 민감했습니다(추정).",
+      "한국장은 미10년물과 원/달러, 외국인 선물 흐름의 같은 방향 움직임 확인이 우선입니다."
+    ],
+    "tags": [
+      "미국증시",
+      "금리",
+      "환율",
+      "지정학"
+    ],
+    "file": "./posts/2026-05-28.md",
+    "indices": {
+      "sp": {
+        "level": "7,540.80",
+        "chg": "+0.29%"
+      },
+      "nasdaq": {
+        "level": "26,812.40",
+        "chg": "+0.59%"
+      },
+      "dow": {
+        "level": "50,398.20",
+        "chg": "-0.13%"
+      }
+    },
+    "overnightLead": "간밤 핵심은 지정학 관련 발언과 실제 집행 조치의 간극이었습니다. 발언은 강했지만 즉시 집행된 대형 조치가 제한적으로 해석되며 급락으로 이어지진 않았습니다(추정). 다만 유가와 미10년물이 함께 재상승하면 지금의 완만한 위험선호는 빠르게 약해질 수 있습니다. 오늘도 뉴스 제목보다 유가·금리·달러의 실제 숫자 반응이 더 중요합니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "지정학 발언은 확대됐지만 공식 집행 신호는 제한적으로 해석됐습니다(추정)."
+        },
+        {
+          "title": "핵심 변수",
+          "desc": "금리와 달러가 동시에 상방으로 열리는지 여부가 당일 분기점입니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "발언/집행 구분 → 유가·금리 안정 기대 → 기술주 상대강세, 경기민감 차별화."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,540.80(+0.29%, 추정), Nasdaq 26,812.40(+0.59%, 추정), Dow 50,398.20(-0.13%, 추정), UST10Y 4.53%(추정), VIX 16.84(추정)"
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "즉시 확인 신호",
+          "desc": "미10년물 4.60% 재돌파와 원/달러 상단 이탈 동시 발생 여부를 확인하세요."
+        },
+        {
+          "title": "수급 체크",
+          "desc": "외국인 코스피200 선물 순매수 지속 여부가 한국 대형주 탄력의 선행 신호입니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "주 시나리오",
+          "desc": "금리 안정과 달러 과열 진정이 이어지면 반도체·대형 성장주의 상대강세가 유력합니다(추정)."
+        },
+        {
+          "title": "실행 힌트",
+          "desc": "3회 분할(40/35/25), 1차 60% 이내. 금리 재상승+원/달러 상단 이탈 동시 발생 시 신규 위험 절반 축소."
+        }
+      ]
+    },
+    "title_en": "Selective risk-on with yield/USD stabilization attempt; watch rate-FX alignment in Korea",
+    "highlights_en": [
+      "Overnight pricing focused more on transmission into oil and yields than on headline volume itself (estimate).",
+      "Mega-cap tech held relatively better, while cyclicals stayed more sensitive to commodities and USD moves (estimate).",
+      "For Korea, first check whether US10Y, USD/KRW, and foreign futures flow point in the same direction."
+    ],
+    "tags_en": [
+      "US Equities",
+      "Rates",
+      "FX",
+      "Geopolitics"
+    ],
+    "file_en": "./posts/2026-05-28.en.md",
+    "overnightLead_en": "The overnight lead was the gap between geopolitical rhetoric and formal execution. Headline tone was strong, but immediate hard actions were interpreted as limited, so broad liquidation did not dominate (estimate). If oil and US10Y re-accelerate together, the current mild risk-on tone can fade quickly. Today again, watch actual moves in oil, yields, and USD more than headline count.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "Geopolitical rhetoric rose, but markets read immediate formal execution as limited (estimate)."
+        },
+        {
+          "title": "Core variable",
+          "desc": "The session pivot is whether yields and USD open higher together."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Rhetoric/execution split → contained oil-rate shock expectation → relative support for mega-cap tech."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P 500 7,540.80 (+0.29%, estimated), Nasdaq 26,812.40 (+0.59%, estimated), Dow 50,398.20 (-0.13%, estimated), UST10Y 4.53% (estimated), VIX 16.84 (estimated)"
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Immediate signals",
+          "desc": "Monitor a joint move: US10Y above 4.60% and USD/KRW upside extension."
+        },
+        {
+          "title": "Flow check",
+          "desc": "Sustained foreign net-buy in KOSPI200 futures would confirm local large-cap support."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Main scenario",
+          "desc": "If yields stay stable and USD does not overheat, Korean semis and quality growth should outperform (estimate)."
+        },
+        {
+          "title": "Execution hint",
+          "desc": "Use 3 tranches (40/35/25), first clip within 60% size; halve new risk if rates and FX deteriorate together."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-05-27",
     "title": "기술주 주도 반등과 금리 하락, 오늘 한국장은 환율·선물 수급 확인이 핵심",
     "highlights": [
