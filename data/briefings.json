@@ -1,5 +1,134 @@
 [
   {
+    "date": "2026-05-27",
+    "title": "기술주 주도 반등과 금리 하락, 오늘 한국장은 환율·선물 수급 확인이 핵심",
+    "highlights": [
+      "미국 증시는 나스닥·S&P500 상승, 다우 하락으로 차별화됐습니다.",
+      "미10년물 하락(4.56%→4.49%)과 유가 하락(WTI 96.60→93.10달러)이 성장주에 우호적이었습니다.",
+      "오늘 한국장은 원/달러 안정과 외국인 선물 순매수 지속 여부가 가장 빠른 확인 신호입니다."
+    ],
+    "tags": [
+      "미국증시",
+      "금리",
+      "반도체",
+      "유가"
+    ],
+    "file": "./posts/2026-05-27.md",
+    "indices": {
+      "sp": {
+        "level": "7,519.12",
+        "chg": "+0.61%"
+      },
+      "nasdaq": {
+        "level": "26,656.18",
+        "chg": "+1.19%"
+      },
+      "dow": {
+        "level": "50,461.68",
+        "chg": "-0.23%"
+      }
+    },
+    "overnightLead": "간밤 시장은 금리 하락과 기술주 강세가 동시에 나타났습니다. 미10년물이 내려오자 반도체와 대형 성장주로 매수가 집중됐고, 유가 하락이 물가 부담 우려를 덜어줬습니다. 지정학 관련 발언은 이어졌지만 즉시 집행된 강한 조치가 제한적이어서 공포 매도는 확산되지 않았습니다(추정). 다만 유가와 금리가 함께 반등하면 현재 분위기는 빠르게 되돌아갈 수 있습니다.",
+    "insightSections": {
+      "topStory": [
+        {
+          "title": "핵심 사건",
+          "desc": "미국 금리 하락과 반도체 급등이 동시 발생하며 위험선호를 이끌었습니다."
+        },
+        {
+          "title": "핵심 변수",
+          "desc": "지정학 발언이 공식 집행 조치로 전환되는지 여부가 다음 분기점입니다."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "반응 경로",
+          "desc": "금리 하락+유가 하락 → 성장주 밸류에이션 부담 완화 → 나스닥 상대강세."
+        },
+        {
+          "title": "숫자 스냅샷",
+          "desc": "S&P500 7,519.12(+0.61%), Nasdaq 26,656.18(+1.19%), Dow 50,461.68(-0.23%), UST10Y 4.49%, VIX 17.01"
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "즉시 확인 신호",
+          "desc": "미10년물 4.55% 재돌파와 원/달러 1,525 상향 이탈 동시 발생 여부를 확인하세요."
+        },
+        {
+          "title": "수급 체크",
+          "desc": "외국인 코스피200 선물 순매수 유지가 한국 대형주 모멘텀의 핵심 확인 신호입니다."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "주 시나리오",
+          "desc": "금리 하락 지속과 유가 안정이 이어질 경우, 한국 반도체·대형 성장주의 상대강세 가능성이 높습니다."
+        },
+        {
+          "title": "실행 힌트",
+          "desc": "3회 분할(50/30/20), 1차는 평시 70% 이내. 금리·환율 신호 동시 악화 시 신규 위험 노출 절반 축소."
+        }
+      ]
+    },
+    "title_en": "Lower yields and semi leadership support risk tone; watch FX-flow confirmation in Korea",
+    "highlights_en": [
+      "US equities diverged, with Nasdaq and S&P 500 higher while the Dow slipped.",
+      "US10Y fell from 4.56% to 4.49% and WTI dropped from .60 to .10, supporting growth assets.",
+      "For Korea, the fastest confirmation signal is the combination of USD/KRW stability and sustained foreign futures buying."
+    ],
+    "tags_en": [
+      "US Equities",
+      "Rates",
+      "Semiconductors",
+      "Oil"
+    ],
+    "file_en": "./posts/2026-05-27.en.md",
+    "overnightLead_en": "Overnight action was defined by lower yields and strong semiconductor leadership. As US10Y declined, long-duration growth names attracted broad inflows, and lower oil helped reduce inflation pressure concerns. Geopolitical rhetoric continued, but immediate hard enforcement appeared limited, which kept panic pricing contained (estimate). The setup can reverse quickly if oil and yields rebound together.",
+    "insightSections_en": {
+      "topStory": [
+        {
+          "title": "Core event",
+          "desc": "Falling US yields and a sharp semiconductor rally reinforced risk appetite."
+        },
+        {
+          "title": "Core variable",
+          "desc": "The next pivot is whether rhetoric turns into formal executable action."
+        }
+      ],
+      "marketReaction": [
+        {
+          "title": "Transmission path",
+          "desc": "Lower yields + softer oil reduced valuation stress and favored growth leadership."
+        },
+        {
+          "title": "Snapshot",
+          "desc": "S&P 500 7,519.12 (+0.61%), Nasdaq 26,656.18 (+1.19%), Dow 50,461.68 (-0.23%), UST10Y 4.49%, VIX 17.01"
+        }
+      ],
+      "watchNow": [
+        {
+          "title": "Immediate signals",
+          "desc": "Watch for a joint move: US10Y above 4.55% and USD/KRW above 1,525."
+        },
+        {
+          "title": "Flow check",
+          "desc": "Sustained foreign net buying in KOSPI200 futures would confirm large-cap support."
+        }
+      ],
+      "positioning": [
+        {
+          "title": "Main scenario",
+          "desc": "If lower yields and stable oil persist, Korean semis and growth large caps should outperform."
+        },
+        {
+          "title": "Execution hint",
+          "desc": "Use 3 tranches (50/30/20), first clip up to 70% normal size; halve new risk if rate and FX signals deteriorate together."
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-05-26",
     "title": "미국 휴장 속 금리·달러 안정 점검, 한국장은 환율-선물 수급이 핵심",
     "highlights": [
